@@ -5,58 +5,7 @@
     <projectFile profileName="IIS Express">RazorMVCDotNetApp.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Controllers/Department/IndexController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pages/Index/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Employee/Add.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Employee/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/animatecss/animate.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/dropdown/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/dropdown/js/navbar-dropdown.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/formoid/formoid.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/hashes.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/mbr-1256x1097.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/mbr-2-596x397.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/mbr-3-596x397.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/mbr-596x398.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/mbr-596x401.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/mbr-596x596.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/mbr-816x792.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/mbr-816x813.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/mbr-816x855.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/images/swimlane-model-view-controller.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/mobirise/css/mbr-additional.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/smoothscroll/smooth-scroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/sociallikes/social-likes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/socicon/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/socicon/fonts/socicon.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/socicon/fonts/socicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/socicon/fonts/socicon.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/socicon/fonts/socicon.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/socicon/fonts/socicon.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/theme/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/theme/js/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/web/assets/mobirise-icons2/mobirise2.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/web/assets/mobirise-icons2/mobirise2.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/web/assets/mobirise-icons2/mobirise2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/web/assets/mobirise-icons2/mobirise2.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/web/assets/mobirise-icons2/mobirise2.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/assets/ytplayer/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data/DataBaseConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBaseConnection.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RazorMVCDotNetApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RazorMVCDotNetApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Department/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Edit.cshtml" afterDir="false" />
-    </list>
+    <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
