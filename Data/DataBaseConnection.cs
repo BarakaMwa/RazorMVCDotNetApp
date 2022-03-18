@@ -10,7 +10,7 @@ namespace Data.DataBaseConnection
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseMySQL("server=localhost;userid=root;pwd=rootmysql;port=3399;database=sakila;sslmode=none;");
+            options.UseMySQL("server=localhost;userid=root;pwd=rootmysql;port=3399;database=test;sslmode=none;");
         }
     }
 }
