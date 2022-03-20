@@ -7,6 +7,26 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
     <link rel="stylesheet" href="~/RazorMVCDotNetApp.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/assets/web/assets/mobirise-icons2/mobirise2.css">
+    <link rel="stylesheet" href="~/assets/web/assets/mobirise-icons-bold/mobirise-icons-bold.css">
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="~/assets/animatecss/animate.css">
+    <link rel="stylesheet" href="~/assets/dropdown/css/style.css">
+    <link rel="stylesheet" href="~/assets/socicon/css/styles.css">
+    <link rel="stylesheet" href="~/assets/theme/css/style.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap">
+    </noscript>
+    <link rel="preload" as="style" href="~/assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="~/assets/mobirise/css/mbr-additional.css" type="text/css">
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
 </head>
 <body>
 <header>
@@ -25,13 +45,100 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Pricing">Pricing</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
-<div class="container">
-    <main role="main" class="pb-3">
+<div class="row">
+
+    <div class="flex-shrink-0 p-3 pb-5 bg-white col-3" style="width: 280px;">
+        @*<a href="/" class="d-flex align-items-center pb-3 mb-3 link-dark text-decoration-none border-bottom">
+            <svg class="bi me-2" width="30" height="24">
+                <use xlink:href="#bootstrap"></use>
+            </svg>
+            <span class="">Memu</span>
+        </a>*@
+        <ul class="list-unstyled ps-0">
+            @*<li class="mb-1">
+                <a class="btn btn-toggle align-items-center rounded collapsed" aria-expanded="false" asp-controller="DashBoard" asp-action="Index">
+                    DashBoard
+                </a>
+            </li>*@
+            <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">
+                    Departments
+                </button>
+                <div class="collapse" id="home-collapse" style="">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li>
+                            <a class="link-dark rounded btn" asp-controller="Department" asp-action="Index">View</a>
+                        </li>
+                        <li>
+                            <a class="link-dark rounded btn" asp-controller="Department" asp-action="Add">Add New</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">
+                    Employees
+                </button>
+                <div class="collapse" id="dashboard-collapse" style="">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li>
+                            <a class="link-dark rounded btn" asp-controller="Employee" asp-action="Index">View</a>
+                        </li>
+                        <li>
+                            <a class="link-dark rounded btn" asp-controller="Employee" asp-action="Add">Add New</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            @*<li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
+                    Country
+                </button>
+                <div class="collapse" id="orders-collapse" style="">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li>
+                            <a class="link-dark rounded btn" asp-controller="Country" asp-action="Index">View</a>
+                        </li>
+                        <li>
+                            <a class="link-dark rounded btn" asp-controller="Country" asp-action="AddCountry">Add New</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>*@
+            <li class="border-top my-3"></li>
+            @*<li class="mb-1">
+                <button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
+                    Customer
+                </button>
+                <div class="collapse" id="account-collapse" style="">
+                    <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                        <li>
+                            <a class="link-dark rounded btn">View</a>
+                        </li>
+                        <li>
+                            <a class="link-dark rounded btn">Add New</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>*@
+        </ul>
+    </div>
+
+    <main role="main" class="pb-5 pl-3 pr-3 col">
         @RenderBody()
     </main>
 </div>
@@ -41,9 +148,22 @@
         &copy; 2022 - RazorMVCDotNetApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
     </div>
 </footer>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
 @await RenderSectionAsync("Scripts", required: false)
+@*<script src="~/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="~/assets/smoothscroll/smooth-scroll.js"></script>
+<script src="~/assets/ytplayer/index.js"></script>
+<script src="~/assets/dropdown/js/navbar-dropdown.js"></script>
+<script src="~/assets/sociallikes/social-likes.js"></script>
+<script src="~/assets/theme/js/script.js"></script>
+<script src="~/assets/formoid/formoid.min.js"></script>*@
+
+
+<div id="scrollToTop" class="scrollToTop mbr-arrow-up">
+    <a style="text-align: center;">
+        <i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i>
+    </a>
+</div>
+<input name="animation" type="hidden">
 </body>
+
 </html>

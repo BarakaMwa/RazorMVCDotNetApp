@@ -6,7 +6,7 @@ namespace Data.DataBaseConnection
     public class DbConnection: DbContext
     {
         public DbSet<EmployeeModel> Employee { get; set; }
-        public DbSet<DepartmentModal> City { get; set; }
+        public DbSet<DepartmentModel> Department { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {

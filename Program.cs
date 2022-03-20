@@ -1,3 +1,4 @@
+using Data.DataBaseConnection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -6,7 +7,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
 builder.Services.AddRazorPages();
+
+//Add DbContext for Injection
+builder.Services.AddDbContext<DbConnection>();
+
+//Add Daos for Injection
+/*builder.Services.AddScoped<IEmployeeDao,EmployeeDao>();
+builder.Services.AddScoped<IDepartmentDao,DepartmentDao>();*/
 
 var app = builder.Build();
 

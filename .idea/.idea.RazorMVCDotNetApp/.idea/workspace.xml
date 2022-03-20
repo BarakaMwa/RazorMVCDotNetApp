@@ -6,8 +6,27 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dao/Department/DepartmentDao.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interfaces/Department/IDepartmentService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Interfaces/Employee/IEmployeeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Department/AddDepartmentService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Services/Employee/EmployeeService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Views/Home/Pricing.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/Department/IndexController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Department/DepartmentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBaseConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBaseConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DepartmentModal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DepartmentModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/EmployeeModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/EmployeeModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/Index/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Contact.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RazorMVCDotNetApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RazorMVCDotNetApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Department/Add.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Add.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/About.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/About.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Home/Privacy.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Home/Privacy.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +35,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/29/RazorPage.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="26W7I9hHHlKnd8FEjHs9pfgqVIY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -29,9 +51,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected=".NET Launch Settings Profile.RazorMVCDotNetApp">
@@ -74,7 +99,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1647527405870</updated>
-      <workItem from="1647527461693" duration="10823000" />
+      <workItem from="1647527461693" duration="14497000" />
+      <workItem from="1647769171338" duration="8865000" />
     </task>
     <task id="LOCAL-00001" summary="Razor Init">
       <created>1647553821256</created>
@@ -97,7 +123,7 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

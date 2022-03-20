@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
-namespace RazorMVCDotNetApp.Controllers.Department
+namespace RazorMVCDotNetApp.Controllers.Employee
 {
-    public class IndexController: Controller
+    public class EmployeeController: Controller
     {
+        private readonly ILogger<HomeController> _logger;
         
         public IActionResult Index()
         {
