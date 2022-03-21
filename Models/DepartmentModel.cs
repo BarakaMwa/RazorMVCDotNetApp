@@ -6,7 +6,7 @@ namespace RazorMVCDotNetApp.Models
     [Table("department")]
     public class DepartmentModel
     {
-        [Key] [Column("id")] public int Id {get; set;}
-        [Column("name")] public string Name {get; set;}
+        [Key] [Column("ID")] public int Id {get; set;}
+        [Column("NAME")] public string Name {get; set;}
     }
 }

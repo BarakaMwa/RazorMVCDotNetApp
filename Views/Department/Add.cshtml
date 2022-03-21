@@ -1,12 +1,12 @@
-﻿@using RazorMVCDotNetApp.Models
-@model DepartmentModel;
+﻿@model RazorMVCDotNetApp.Dto.Department.DepartmentDto;
 @{
     ViewData["Title"] = "Add Department";
 }
-<form asp-route="" class="row g-3 needs-validation" novalidate>
+<form asp-controller="Department" asp-action="AddDepartment" class="row g-3 needs-validation" id="addDepartmentForm" novalidate method="post">
     <div class="col-md-4">
-        <label for="validationCustom01" class="form-label">Department name</label>
-        <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+        <label for="validationCustom01" class="form-label">Department Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="validationCustom01" value="" required>
+        <span asp-validation-for="Name" class="text-danger"></span>
         <div class="valid-feedback">
             Looks good!
         </div>
@@ -14,4 +14,111 @@
             Not Valid
         </div>
     </div>
+    <div class="col-12">
+        <input type="submit" id="btnSubmit" class="btn btn-primary" value="Save"/>
+    </div>
 </form>
+
+<script>
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+function bsValidate(){
+    'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+    
+            form.classList.add('was-validated')
+          }, false)
+        })
+}
+
+</script>
+<script>
+ $(document).ready(function () { 
+     $(document).on("submit", "#addDepartmentForm", function (e) {
+        // $("#addDepartmentForm").submit(function (e) {  
+            e.preventDefault()                          
+            //Serialize the form datas.   
+            var valdata = $(this).serialize();   
+            $.ajax({   
+                url: "/Department/AddDepartment",   
+                type: "POST",   
+                dataType: 'json',   
+                enctype: 'multipart/form-data',
+                            processData: false,
+                            contentType: 'application/x-www-form-urlencoded',
+                            cache: false, 
+                data: valdata,
+                success: function (response) {
+                                              console.log(response);
+                                              if (response.status == "success") {
+                                                  swal({
+                                                          title: "Done",
+                                                          text: response.message,
+                                                          type: "success",
+                                                          confirmButtonClass: "btn-primary",
+                                                          confirmButtonText: "Okay",
+                                                          closeOnConfirm: true
+                                                      },
+                                                      function () {
+                                                          // $(".confirm").attr('disabled', 'disabled');
+                                                      });
+                              
+                                              } else {
+                                                  swal("System Error!", response.message, "error");
+                                              }
+                                          },
+                error: function (jqXHR, exception) {
+                    getErrorMessage(jqXHR, exception);
+                },  
+            });   
+        });   
+    });
+  function getErrorMessage(jqXHR, exception) {
+             var msg = '';
+             if (jqXHR.status === 0) {
+                 msg = 'Not connect.\n Verify Network.';
+             } else if (jqXHR.status == 404) {
+                 msg = 'Requested page not found. [404]';
+             } else if (jqXHR.status == 500) {
+                 msg = 'Internal Server Error [500].';
+             } else if (exception === 'parsererror') {
+                 msg = 'Requested JSON parse failed.';
+             } else if (exception === 'timeout') {
+                 msg = 'Time out error.';
+             } else if (exception === 'abort') {
+                 msg = 'Ajax request aborted.';
+             } else {
+                 msg = 'Uncaught Error.\n' + jqXHR.responseText;
+             }
+             swal("Error", msg, "error");
+         }
+</script>

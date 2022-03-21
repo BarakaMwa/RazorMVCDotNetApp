@@ -8,11 +8,10 @@ namespace RazorMVCDotNetApp.Dao.Department
     public class DepartmentDao
     {
         
-        private readonly DbConnection con;
+        DbConnection con = new DbConnection();
 
-        public DepartmentDao(DbConnection con)
+        public DepartmentDao()
         {
-            this.con = con;
         }
         
         public DepartmentModel Save(DepartmentModel department)

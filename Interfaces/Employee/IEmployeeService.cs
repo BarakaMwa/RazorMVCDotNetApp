@@ -5,11 +5,13 @@ namespace RazorMVCDotNetApp.Interfaces.Employee
 {
     public class IEmployeeService
     {
-        /*EmployeeModel Save(EmployeeModel employee);
-
-        EmployeeModel FindEmployee(int id);
+        /*EmployeeModel AddEmployee(EmployeeModel employee);
         
-        List<EmployeeModel> FindEmployee();*/
+        EmployeeModel EditEmployee(EmployeeModel employee);
+
+        EmployeeModel FindById(int id);
+        
+        List<EmployeeModel> FindAll();*/
         
     }
 }

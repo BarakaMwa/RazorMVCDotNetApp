@@ -2,21 +2,24 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RazorMVCDotNetApp.Dao.Department;
+using RazorMVCDotNetApp.Dto.Department;
 using RazorMVCDotNetApp.Interfaces.Department;
 using RazorMVCDotNetApp.Models;
+using RazorMVCDotNetApp.Services.Department;
 
 namespace RazorMVCDotNetApp.Controllers.Department
 {
     public class DepartmentController: Controller
     {
-        private readonly IDepartmentService IDepartmentService;
+        private IDepartmentService iDepartmentService;
+        private DepartmentDao departmentDao;
         private readonly ILogger<HomeController> _logger;
 
-        public DepartmentController(IDepartmentService IDepartmentService, ILogger<HomeController> _logger)
+        public DepartmentController()
         {
-            this.IDepartmentService = IDepartmentService;
-            this._logger = _logger;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -24,7 +27,7 @@ namespace RazorMVCDotNetApp.Controllers.Department
         
         public IActionResult Add()
         {
-            return View();
+            return View(new DepartmentDto());
         }
         
         public IActionResult Edit()
@@ -33,7 +36,7 @@ namespace RazorMVCDotNetApp.Controllers.Department
         }
 
         [HttpPost]
-        public IActionResult AddDepartment(DepartmentModel department)
+        public IActionResult AddDepartment(DepartmentDto departmentDto)
         {
             //Declare the response object
             Dictionary<String,Object> response = new Dictionary<string, object>();
@@ -41,10 +44,12 @@ namespace RazorMVCDotNetApp.Controllers.Department
             //otherwise return the model to Index view
             if (ModelState.IsValid)
             {
+                var department = new DepartmentModel();
                 try
                 {
-                    department = IDepartmentService.AddDepartment(department.Name);
-                    if (department == null)
+                    iDepartmentService = new AddDepartmentService();
+                    department = iDepartmentService.AddDepartment(departmentDto);
+                    if (department.Name == null)
                     {
                         response.Add("status","error");
                         response.Add("message","Failed to save the data due to an error in Service.");
@@ -63,7 +68,10 @@ namespace RazorMVCDotNetApp.Controllers.Department
                 }
             }
                 // ViewData["Departments"] = DepartmentDao.FindAll();
-                return View("Index",department);
+                // return View("Add",departmentDto);
+                response.Add("status","error");
+                response.Add("message","Invalid Inputs " + ModelState.Values);
+                return Json(response);
          
         }
 
