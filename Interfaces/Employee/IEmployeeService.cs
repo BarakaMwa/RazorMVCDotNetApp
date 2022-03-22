@@ -1,17 +1,18 @@
 ﻿using System.Collections.Generic;
+using RazorMVCDotNetApp.Dto.Employee;
 using RazorMVCDotNetApp.Models;
 
 namespace RazorMVCDotNetApp.Interfaces.Employee
 {
-    public class IEmployeeService
+    public interface IEmployeeService
     {
-        /*EmployeeModel AddEmployee(EmployeeModel employee);
+        EmployeeModel AddEmployee(EmployeeDto employeeDto);
         
-        EmployeeModel EditEmployee(EmployeeModel employee);
+        EmployeeModel EditEmployee(EmployeeDto employeeDto);
 
         EmployeeModel FindById(int id);
         
-        List<EmployeeModel> FindAll();*/
+        List<EmployeeModel> FindAll();
         
     }
 }

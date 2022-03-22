@@ -1,12 +1,25 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RazorMVCDotNetApp.Dao.Department;
+using RazorMVCDotNetApp.Dto.Employee;
+using RazorMVCDotNetApp.Employee.Services;
+using RazorMVCDotNetApp.Interfaces.Employee;
+using RazorMVCDotNetApp.Models;
 
 namespace RazorMVCDotNetApp.Controllers.Employee
 {
     public class EmployeeController: Controller
     {
         private readonly ILogger<HomeController> _logger;
-        
+        private IEmployeeService iEmployeeService;
+        private DepartmentDao departmentDao;
+
+        public EmployeeController()
+        {
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -14,12 +27,95 @@ namespace RazorMVCDotNetApp.Controllers.Employee
         
         public IActionResult Add()
         {
-            return View();
+            //Populate ViewBag with Departments Data
+            departmentDao = new DepartmentDao();
+            ViewData["Departments"] = departmentDao.FindAll();
+
+            //Pass the EmployeeDto to the View
+            return View(new EmployeeDto());
         }
         
         public IActionResult Edit()
         {
             return View();
         }
+        
+        [HttpPost]
+        public IActionResult AddEmployee(EmployeeDto employeeDto)
+        {
+            //Declare the response object
+            Dictionary<String,Object> response = new Dictionary<string, object>();
+            //Check if the model is valid and proceed with saving the data
+            //otherwise return the model to Index view
+            if (ModelState.IsValid)
+            {
+                var employee = new EmployeeModel();
+                try
+                {
+                    iEmployeeService = new AddEmployeeService();
+                    employee = iEmployeeService.AddEmployee(employeeDto);
+                    if (employee == null)
+                    {
+                        response.Add("status","error");
+                        response.Add("message","Failed to save the data due to an error in Service.");
+                        return Json(response);
+                    }
+                    response.Add("status","success");
+                    response.Add("message","Employee Saved Successfully");
+                    return Json(response);
+                }
+                catch(Exception ex)
+                {
+                    response.Add("status","error");
+                    response.Add("message","Failed to save the data due to an error In Controller.");
+                    response.Add("errorMessage", ex.InnerException!=null?ex.InnerException.Message:ex.Message);
+                    return Json(response);
+                }
+            }
+
+            response.Add("status","error");
+            response.Add("message","Invalid Inputs " + ModelState.Values);
+            return Json(response);
+        }
+        
+        /*[HttpPost]
+        public IActionResult EditEmployee(EmployeeDto employeeDto)
+        {
+            //Declare the response object
+            Dictionary<String,Object> response = new Dictionary<string, object>();
+            //Check if the model is valid and proceed with saving the data
+            //otherwise return the model to Index view
+            if (ModelState.IsValid)
+            {
+                // var employee = new EmployeeModel();
+                iEmployeeService = new EditEmployeeService();
+                var employee = 
+                try
+                {
+                    iEmployeeService = new AddEmployeeService();
+                    employee = iEmployeeService.AddEmployee(employeeDto);
+                    if (employee == null)
+                    {
+                        response.Add("status","error");
+                        response.Add("message","Failed to save the data due to an error in Service.");
+                        return Json(response);
+                    }
+                    response.Add("status","success");
+                    response.Add("message","Department Saved Successfully");
+                    return Json(response);
+                }
+                catch(Exception ex)
+                {
+                    response.Add("status","error");
+                    response.Add("message","Failed to save the data due to an error In Controller.");
+                    response.Add("errorMessage", ex.InnerException!=null?ex.InnerException.Message:ex.Message);
+                    return Json(response);
+                }
+            }
+
+            response.Add("status","error");
+            response.Add("message","Invalid Inputs " + ModelState.Values);
+            return Json(response);
+        }*/
     }
 }

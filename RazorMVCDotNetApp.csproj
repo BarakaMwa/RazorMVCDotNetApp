@@ -12,8 +12,4 @@
       <PackageReference Include="MySql.EntityFrameworkCore" Version="6.0.0" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Dao\Employee" />
-    </ItemGroup>
-
 </Project>

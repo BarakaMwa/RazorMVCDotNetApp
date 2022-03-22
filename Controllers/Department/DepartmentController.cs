@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RazorMVCDotNetApp.Dao.Department;
+using RazorMVCDotNetApp.Dto;
 using RazorMVCDotNetApp.Dto.Department;
 using RazorMVCDotNetApp.Interfaces.Department;
 using RazorMVCDotNetApp.Models;
@@ -22,6 +23,8 @@ namespace RazorMVCDotNetApp.Controllers.Department
 
         public IActionResult Index()
         {
+            departmentDao = new DepartmentDao();
+            ViewData["Departments"] = departmentDao.FindAll();
             return View();
         }
         
@@ -33,6 +36,16 @@ namespace RazorMVCDotNetApp.Controllers.Department
         public IActionResult Edit()
         {
             return View();
+        }
+        
+        [HttpPost]
+        public IActionResult EditDepartment()
+        {
+            var response = new Dictionary<string, object>();
+            
+            //Editing IService Function Called here
+            
+            return Json(response);
         }
 
         [HttpPost]
@@ -73,6 +86,22 @@ namespace RazorMVCDotNetApp.Controllers.Department
                 response.Add("message","Invalid Inputs " + ModelState.Values);
                 return Json(response);
          
+        }
+
+        [HttpPost]
+        public IActionResult GetTopHundred(SearchDto searchDto)
+        {
+            var response = new Dictionary<string, object?>();
+
+            iDepartmentService = new AddDepartmentService();
+            var departments = iDepartmentService.GetDepartments(searchDto);
+
+            response.Add("data",departments);
+            response.Add("recordsTotal",departments.Count);
+            response.Add("recordsFiltered",departments.Count);
+            response.Add("draw",searchDto.draw);
+
+            return Json(response);
         }
 
     }

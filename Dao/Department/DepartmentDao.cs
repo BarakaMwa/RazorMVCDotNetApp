@@ -26,5 +26,15 @@ namespace RazorMVCDotNetApp.Dao.Department
         {
             return con.Department.OrderBy(d=>d.Name).ToList();
         }
+
+        public List<DepartmentModel> FindContaining(string search)
+        {
+            return con.Department.Where(d=>d.Name.Contains(search)).ToList();
+        }
+
+        public List<DepartmentModel> FindTopHundred()
+        {
+            return con.Department.OrderBy(d=>d.Id).Take(100).ToList();
+        }
     }
 }

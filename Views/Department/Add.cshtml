@@ -4,8 +4,8 @@
 }
 <form asp-controller="Department" asp-action="AddDepartment" class="row g-3 needs-validation" id="addDepartmentForm" novalidate method="post">
     <div class="col-md-4">
-        <label for="validationCustom01" class="form-label">Department Name</label>
-        <input type="text" asp-for="Name" class="form-control" id="validationCustom01" value="" required>
+        <label for="Name" class="form-label">Department Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="Name" value="" required>
         <span asp-validation-for="Name" class="text-danger"></span>
         <div class="valid-feedback">
             Looks good!
@@ -66,8 +66,40 @@ function bsValidate(){
      $(document).on("submit", "#addDepartmentForm", function (e) {
         // $("#addDepartmentForm").submit(function (e) {  
             e.preventDefault()                          
-            //Serialize the form datas.   
-            var valdata = $(this).serialize();   
+            //Serialize the form datas. 
+            var data = $(this).serialize();     
+            if ($(this)[0].checkValidity()) {
+            
+                        swal({
+                            title: "Confirm",
+                            text: "Proceed?",
+                            type: "info",
+                            showCancelButton: true,
+                            confirmButtonClass: "btn-danger",
+                            confirmButtonText: "Yes",
+                            closeOnConfirm: false
+                        }, 
+                        function () {
+                            $(".confirm").attr('disabled', 'disabled');
+                            submitData(data);
+                        });
+            
+                    }
+            else {
+            
+                        swal({
+                            title: "Invalid Inputs",
+                            text: "Please Provide Valid Login Data? " + $(this)[0].validationMessage,
+                            type: "warning",
+                            showCancelButton: true,
+                            confirmButtonClass: "btn-danger",
+                            closeOnConfirm: false
+                        },function(){
+                            bsValidate();
+                        });
+            
+                    }
+            function submitData(valdata){
             $.ajax({   
                 url: "/Department/AddDepartment",   
                 type: "POST",   
@@ -89,7 +121,8 @@ function bsValidate(){
                                                           closeOnConfirm: true
                                                       },
                                                       function () {
-                                                          // $(".confirm").attr('disabled', 'disabled');
+                                                          $(".confirm").attr('disabled', 'disabled');
+                                                          window.location.href = "/Department/Add";
                                                       });
                               
                                               } else {
@@ -100,6 +133,7 @@ function bsValidate(){
                     getErrorMessage(jqXHR, exception);
                 },  
             });   
+            }
         });   
     });
   function getErrorMessage(jqXHR, exception) {

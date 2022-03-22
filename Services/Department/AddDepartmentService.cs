@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Data.DataBaseConnection;
 using RazorMVCDotNetApp.Dao.Department;
+using RazorMVCDotNetApp.Dto;
 using RazorMVCDotNetApp.Dto.Department;
 using RazorMVCDotNetApp.Interfaces.Department;
 using RazorMVCDotNetApp.Models;
@@ -15,7 +15,7 @@ namespace RazorMVCDotNetApp.Services.Department
         public AddDepartmentService()
         {
         }
-        
+
         public DepartmentModel AddDepartment(DepartmentDto departmentDto)
         {
             var department = new DepartmentModel();
@@ -40,9 +40,37 @@ namespace RazorMVCDotNetApp.Services.Department
             throw new NotImplementedException();
         }
 
+        public List<DepartmentModel>? GetDepartments(SearchDto searchDto)
+        {
+            departmentDao = new DepartmentDao();
+            string search = searchDto.search["value"];
+            
+            var departments = departmentDao.FindContaining(search);
+            try
+            {
+                if (departments.Count == 0)
+                {
+                    departments = departmentDao.FindTopHundred();
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error Occured!! ");
+                Console.WriteLine("Error Details : ");
+                Console.WriteLine( ex );
+                departments = null;
+            }
+            
+
+            return departments;
+        }
+
         public List<DepartmentModel> FindAll()
         {
-            throw new NotImplementedException();
+            departmentDao = new DepartmentDao();
+            var departments = departmentDao.FindAll();
+
+            return departments;
         }
     }
 }

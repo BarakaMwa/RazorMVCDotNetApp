@@ -1,1 +1,145 @@
-﻿
+﻿@{
+    ViewData["Title"] = "View Departments";
+    // var departments = (List<DepartmentModel>) ViewData["Departments"];
+}
+<div class="p-2">
+    <table id="departmentsTable" class="table table-hover table-responsive" style="width:100%">
+        <thead>
+        <tr>
+            <th>Department Name</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <th>Department Name</th>
+            <th>Actions</th>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+$(document).ready(function() {
+         
+    var departmentsTable = $('#departmentsTable').DataTable( {
+        "processing": true,
+                    "serverSide": true,
+                    "ajax": {
+                        "url": "/Department/GetTopHundred",
+                        "type": "POST",
+                        "content-type": "application/x-www-form-urlencoded",
+                    },
+                    "columns": [
+                        // { "data": "avatar" },
+                        {"data": "name"},
+                        // {"data": "id"},
+                    ],
+                    "columnDefs": [{
+                                      "targets": 1,
+                                      "data": null,
+                                      "defaultContent": ""
+                                          + "<div class='badge rounded-pill bg-primary m-1 btn-edit p-2' title='Edit' role='button'>Edit</div>"
+                                          + "<div class='badge rounded-pill bg-danger m-1 btn-delete p-2' title='Delete' role='button'>Delete</div>"
+                                  }]
+    } );
+    
+            $('#departmentsTable tbody').on('click', '.btn-delete', function () {
+    
+                var data = departmentsTable.row($(this).parents('tr')).data();
+    
+                var url = '/Department/Delete';                
+                
+                var contentType = "application/x-www-form-urlencoded";
+    
+                var postingData = new FormData();
+                postingData.append('deptId', data['id']);
+    
+                swal({
+                    title: "Confirm",
+                    text: "Delete User?",
+                    type: "info",
+                    showCancelButton: true,
+                    confirmButtonClass: "btn-danger",
+                    confirmButtonText: "Yes",
+                    closeOnConfirm: false
+                }, function () {
+                    $(".confirm").attr('disabled', 'disabled');
+                    submittingData(url, postingData, contentType);
+                });
+    
+            });
+    
+            $('#departmentsTable tbody').on('click', '.btn-edit', function () {
+                var data = departmentsTable.row($(this).parents('tr')).data();
+    
+                window.location.href = '/Department/Edit/' + data['id'];
+    
+            });
+    
+            function submittingData(url, postingData, contentType) {
+            
+                        $.ajax({
+                            url: url,
+                            type: "post",
+                            data: postingData,
+                            datatype: 'json',
+                            enctype: 'multipart/form-data',
+                            processData: false,
+                            contentType: contentType,
+                            cache: false,
+                            success: function (response) {
+                                console.log(response);
+                                var results = JSON.parse("[" + response + "]");
+                                console.log(results);
+                                switch (results[0].status) {
+                                    case "success":
+                                        swal({
+                                                title: "Success",
+                                                text: results[0].message,
+                                                type: "success",
+                                                showCancelButton: false,
+                                                confirmButtonClass: "btn-primary",
+                                                confirmButtonText: "Okay",
+                                                closeOnConfirm: true
+                                            },
+                                            function () {
+            
+                                            });
+                                        break;
+                                    case "warning" :
+                                        swal("Warning", results[0].message, "warning");
+                                        break;
+                                    case "error" :
+                                        swal("Error", results[0].message, "error");
+                                        break;
+                                    default:
+                                        swal("System Error!", results[0].message, "error");
+                                }
+                            }, error: function (jqXHR, exception) {
+                                getErrorMessage(jqXHR, exception);
+                            },
+                        });
+                    }
+                    
+             // This function is used to get error message for all ajax calls
+            function getErrorMessage(jqXHR, exception) {
+                        var msg = '';
+                        if (jqXHR.status === 0) {
+                            msg = 'Not connect.\n Verify Network.';
+                        } else if (jqXHR.status == 404) {
+                            msg = 'Requested page not found. [404]';
+                        } else if (jqXHR.status == 500) {
+                            msg = 'Internal Server Error [500].';
+                        } else if (exception === 'parsererror') {
+                            msg = 'Requested JSON parse failed.';
+                        } else if (exception === 'timeout') {
+                            msg = 'Time out error.';
+                        } else if (exception === 'abort') {
+                            msg = 'Ajax request aborted.';
+                        } else {
+                            msg = 'Uncaught Error.\n' + jqXHR.responseText;
+                        }
+                        swal("Error", msg, "error");
+                    }
+} );
+</script>
