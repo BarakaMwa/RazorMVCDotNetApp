@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RazorMVCDotNetApp.Dao.Department;
@@ -23,8 +24,6 @@ namespace RazorMVCDotNetApp.Controllers.Department
 
         public IActionResult Index()
         {
-            departmentDao = new DepartmentDao();
-            ViewData["Departments"] = departmentDao.FindAll();
             return View();
         }
         
@@ -33,13 +32,16 @@ namespace RazorMVCDotNetApp.Controllers.Department
             return View(new DepartmentDto());
         }
         
-        public IActionResult Edit()
+        public IActionResult Edit(string id)
         {
-            return View();
+            iDepartmentService = new AddDepartmentService();
+            List <DepartmentModel> department = iDepartmentService.GetDepartment(id);
+            ViewData["Department"] = department[0];
+            return View(new DepartmentDto());
         }
         
         [HttpPost]
-        public IActionResult EditDepartment()
+        public IActionResult EditDepartment(DepartmentDto departmentDto)
         {
             var response = new Dictionary<string, object>();
             

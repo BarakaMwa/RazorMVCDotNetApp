@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using RazorMVCDotNetApp.Dto;
 using RazorMVCDotNetApp.Dto.Department;
 using RazorMVCDotNetApp.Models;
@@ -13,6 +14,8 @@ namespace RazorMVCDotNetApp.Interfaces.Department
         
         List<DepartmentModel> FindAll();
         
-        List<DepartmentModel>? GetDepartments(SearchDto searchDto);
+        List<Object> GetDepartments(SearchDto searchDto);
+        
+        List<DepartmentModel> GetDepartment(string id);
     }
 }

@@ -2,11 +2,11 @@
 using System.Security.Cryptography;  
 using System.Text;  
    
-namespace DataEncrypterDecrypter  
+namespace RazorMVCDotNetApp.Commons  
 {  
     public class CryptoEngine  
     {  
-        public static string Encrypt(string input, string key)  
+        public string Encrypt(string input, string key)  
         {  
             byte[] inputArray = UTF8Encoding.UTF8.GetBytes(input);  
             TripleDESCryptoServiceProvider tripleDES = new TripleDESCryptoServiceProvider();  
@@ -18,7 +18,7 @@ namespace DataEncrypterDecrypter
             tripleDES.Clear();  
             return Convert.ToBase64String(resultArray, 0, resultArray.Length);  
         }  
-        public static string Decrypt(string input, string key)  
+        public string Decrypt(string input, string key)  
         {  
             byte[] inputArray = Convert.FromBase64String(input);  
             TripleDESCryptoServiceProvider tripleDES = new TripleDESCryptoServiceProvider();  

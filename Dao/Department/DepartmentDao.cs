@@ -36,5 +36,10 @@ namespace RazorMVCDotNetApp.Dao.Department
         {
             return con.Department.OrderBy(d=>d.Id).Take(100).ToList();
         }
+
+        public List<DepartmentModel> FindById(int id)
+        {
+            return con.Department.Where(d => d.Id == id).ToList();
+        }
     }
 }

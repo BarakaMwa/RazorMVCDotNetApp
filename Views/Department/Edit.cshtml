@@ -1,1 +1,26 @@
-﻿
+﻿@model RazorMVCDotNetApp.Dto.Department.DepartmentDto;
+@{
+    ViewData["Title"] = "Edit Department";
+    var departments = (List<DepartmentModel>) ViewData["Departments"];
+}
+<form asp-controller="Department" asp-action="EditDepartment" class="m-2 row g-3 needs-validation" id="addEmployeeForm" novalidate method="post">
+    <div class="col-md-4">
+        <label for="Name" class="form-label">Department Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="Name" value="@departments[0].Name" required>
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Not Valid
+        </div>
+    </div>
+
+    <div class="col-md-4 hidden" hidden="">
+        <input type="text" asp-for="Id" class="form-control" id="Id" value="" required>
+    </div>
+
+    <div class="col-12">
+        <input type="submit" id="btnSubmit" class="btn btn-success" value="Save Changes"/>
+    </div>
+</form>

@@ -5,12 +5,14 @@ using RazorMVCDotNetApp.Dto;
 using RazorMVCDotNetApp.Dto.Department;
 using RazorMVCDotNetApp.Interfaces.Department;
 using RazorMVCDotNetApp.Models;
+using RazorMVCDotNetApp.Commons;
 
 namespace RazorMVCDotNetApp.Services.Department
 {
     public class AddDepartmentService : IDepartmentService
     {
         private DepartmentDao departmentDao;
+        private CryptoEngine cryptoEngine;
 
         public AddDepartmentService()
         {
@@ -40,11 +42,13 @@ namespace RazorMVCDotNetApp.Services.Department
             throw new NotImplementedException();
         }
 
-        public List<DepartmentModel>? GetDepartments(SearchDto searchDto)
+        // public List<DepartmentModel> GetDepartments(SearchDto searchDto)
+        public List<Object> GetDepartments(SearchDto searchDto)
         {
+            var departmentList = new List<Object>();
             departmentDao = new DepartmentDao();
             string search = searchDto.search["value"];
-            
+
             var departments = departmentDao.FindContaining(search);
             try
             {
@@ -52,17 +56,29 @@ namespace RazorMVCDotNetApp.Services.Department
                 {
                     departments = departmentDao.FindTopHundred();
                 }
+
+                int x = 0;
+                foreach (var item in departments)
+                {
+                    var deptItem = new Dictionary<string, string>();
+                    cryptoEngine = new CryptoEngine();
+                    string idString = cryptoEngine.Encrypt(item.Id.ToString(), "qwer-3qa8-asdf21");
+                    deptItem.Add("name", item.Name);
+                    deptItem.Add("id", idString);
+
+                    departmentList.Add(deptItem);
+                    x++;
+                }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Error Occured!! ");
                 Console.WriteLine("Error Details : ");
-                Console.WriteLine( ex );
-                departments = null;
+                Console.WriteLine(ex);
+                departments.Clear();
             }
-            
 
-            return departments;
+            return departmentList;
         }
 
         public List<DepartmentModel> FindAll()
@@ -71,6 +87,28 @@ namespace RazorMVCDotNetApp.Services.Department
             var departments = departmentDao.FindAll();
 
             return departments;
+        }
+
+        public List<DepartmentModel> GetDepartment(string id)
+        {
+            var department = new List<DepartmentModel>();
+            cryptoEngine = new CryptoEngine();
+            try
+            {
+                
+                id = cryptoEngine.Decrypt(id, "qwer-3qa8-asdf21");
+                int idInt = Convert.ToInt32(id);
+                departmentDao = new DepartmentDao();
+                department = departmentDao.FindById(idInt);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to get Department");
+                Console.WriteLine("Error");
+                Console.WriteLine(ex);
+            }
+
+            return department;
         }
     }
 }
