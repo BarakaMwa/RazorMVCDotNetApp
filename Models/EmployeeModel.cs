@@ -7,8 +7,11 @@ namespace RazorMVCDotNetApp.Models
     public class EmployeeModel
     {
         [Key] [Column("ID")] public int Id { get; set; }
-        [Column("DEPARTMENT_ID")] public int DepartmentId { get; set; }
+        
         [Column("FIRST_NAME")] public string FirstName { get; set; }
+        
         [Column("LAST_NAME")] public string LastName { get; set; }
+        
+        [Column("DEPARTMENT_ID")] public int DepartmentId { get; set; }
     }
 }

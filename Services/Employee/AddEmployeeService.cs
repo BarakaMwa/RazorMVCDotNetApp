@@ -49,18 +49,23 @@ namespace RazorMVCDotNetApp.Employee.Services
             try
             {
                 employees = GetEmployee(employeeDto.IdEncryption);
+                //Assign values to Employee oBject
                 employees[0].FirstName = employeeDto.FirstName;
                 employees[0].LastName = employeeDto.LastName;
-                var decrypt = cryptoEngine.Decrypt(employeeDto.IdEncryption, "qwer-3qa8-asdf21");
+                var decrypt = cryptoEngine.Decrypt(employeeDto.DeptIdEncryption, "qwer-3qa8-asdf21");
                 var idInt = Convert.ToInt32(decrypt);
                 employees[0].DepartmentId = idInt;
+                
+                employeeDao = new EmployeeDao();
+                employee = employeeDao.Update(employees[0]);
+                
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Cannot Get Employee for editing");
                 Console.WriteLine("Error");
                 Console.WriteLine(ex);
-                employees.Clear();
+                employee = null;
             }
 
             return employee;

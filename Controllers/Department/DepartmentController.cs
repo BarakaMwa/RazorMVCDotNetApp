@@ -97,7 +97,7 @@ namespace RazorMVCDotNetApp.Controllers.Department
                 {
                     iDepartmentService = new AddDepartmentService();
                     var department = iDepartmentService.EditDepartment(departmentDto);
-                    if (department == null)
+                    if (department.Id == 0)
                     {
                         response.Add("status", "error");
                         response.Add("message", "Failed to Edit the data due to an error in Service.");
@@ -137,7 +137,7 @@ namespace RazorMVCDotNetApp.Controllers.Department
                 {
                     iDepartmentService = new AddDepartmentService();
                     var department = iDepartmentService.DeleteDepartment(id);
-                    if (department == null)
+                    if (department.Id == 0)
                     {
                         response.Add("status", "error");
                         response.Add("message", "Failed to Delete the data due to an error in Service.");

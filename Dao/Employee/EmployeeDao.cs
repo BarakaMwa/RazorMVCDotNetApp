@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Data.DataBaseConnection;
+using RazorMVCDotNetApp.Data;
 using RazorMVCDotNetApp.Models;
 
 namespace RazorMVCDotNetApp.Dao.Employee
 {
     public class EmployeeDao
     {
-        DbConnection con = new DbConnection();
+       DbConnection con = new DbConnection();
         
         public EmployeeDao(){}
 

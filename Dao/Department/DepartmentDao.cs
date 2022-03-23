@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Data.DataBaseConnection;
+using RazorMVCDotNetApp.Data;
 using RazorMVCDotNetApp.Models;
 
 namespace RazorMVCDotNetApp.Dao.Department
@@ -10,9 +10,7 @@ namespace RazorMVCDotNetApp.Dao.Department
         
         DbConnection con = new DbConnection();
 
-        public DepartmentDao()
-        {
-        }
+        public DepartmentDao(){ }
         
         public DepartmentModel Save(DepartmentModel department)
         {

@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using RazorMVCDotNetApp.Models;
 
-namespace Data.DataBaseConnection
+namespace RazorMVCDotNetApp.Data
 {
     public class DbConnection: DbContext
     {

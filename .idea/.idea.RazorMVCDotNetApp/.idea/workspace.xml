@@ -7,11 +7,17 @@
   <component name="ChangeListManager">
     <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dto/Employee/EmployeeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/Employee/EmployeeDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Department/Add.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Add.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Department/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/Department/DepartmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Department/DepartmentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dao/Department/DepartmentDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/Department/DepartmentDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dao/Employee/EmployeeDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/Employee/EmployeeDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/DataBaseConnection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Data/DataBaseConnection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/EmployeeModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/EmployeeModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Employee/Add.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Add.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +48,7 @@
     <setting file="mock://C:/Users/mwangamb/RiderProjects/RazorMVCDotNetApp/Controllers/Employee/EmployeeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/29/RazorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/2D/RazorPageOfT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1051738089a4f1698e76ec4180c96c31e6790/79/d832d6b1/DbSet`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/mwangamb/RiderProjects/RazorMVCDotNetApp/Controllers/Employee/EmployeeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/16e6dcaab0be4156ad31af88b1ed8700a20698/FB/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -110,7 +117,7 @@
       <workItem from="1647769171338" duration="20005000" />
       <workItem from="1647842442951" duration="9173000" />
       <workItem from="1647855214700" duration="12291000" />
-      <workItem from="1647898901438" duration="48818000" />
+      <workItem from="1647898901438" duration="60589000" />
     </task>
     <task id="LOCAL-00001" summary="Razor Init">
       <created>1647553821256</created>
@@ -185,26 +192,26 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Dao/Department/DepartmentDao.cs</url>
-          <line>21</line>
+          <line>19</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Dao\Department\DepartmentDao.cs" initialLine="22" containingFunctionPresentation="method 'Save'">
             <startOffsets>
-              <option value="478" />
+              <option value="460" />
             </startOffsets>
             <endOffsets>
-              <option value="496" />
+              <option value="478" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Dao/Department/DepartmentDao.cs</url>
-          <line>18</line>
+          <line>16</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Dao\Department\DepartmentDao.cs" initialLine="19" containingFunctionPresentation="method 'Save'">
             <startOffsets>
-              <option value="402" />
+              <option value="384" />
             </startOffsets>
             <endOffsets>
-              <option value="433" />
+              <option value="415" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
@@ -276,13 +283,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Dao/Department/DepartmentDao.cs</url>
-          <line>31</line>
+          <line>29</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Dao\Department\DepartmentDao.cs" initialLine="31" containingFunctionPresentation="method 'FindContaining'">
             <startOffsets>
-              <option value="728" />
+              <option value="710" />
             </startOffsets>
             <endOffsets>
-              <option value="793" />
+              <option value="775" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="34" />
@@ -315,13 +322,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Dao/Department/DepartmentDao.cs</url>
-          <line>41</line>
+          <line>39</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Dao\Department\DepartmentDao.cs" initialLine="41" containingFunctionPresentation="method 'FindById'">
             <startOffsets>
-              <option value="1027" />
+              <option value="1009" />
             </startOffsets>
             <endOffsets>
-              <option value="1081" />
+              <option value="1063" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="41" />
@@ -403,6 +410,188 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs</url>
+          <line>112</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Employee\EmployeeController.cs" initialLine="112" containingFunctionPresentation="method 'EditEmployee'">
+            <startOffsets>
+              <option value="4156" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4179" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs</url>
+          <line>46</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Employee\AddEmployeeService.cs" initialLine="46" containingFunctionPresentation="method 'EditEmployee'">
+            <startOffsets>
+              <option value="1407" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1442" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs</url>
+          <line>50</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Employee\AddEmployeeService.cs" initialLine="50" containingFunctionPresentation="method 'EditEmployee'">
+            <startOffsets>
+              <option value="1544" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1594" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs</url>
+          <line>67</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Employee\AddEmployeeService.cs" initialLine="67" containingFunctionPresentation="method 'EditEmployee'">
+            <startOffsets>
+              <option value="2353" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2353" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs</url>
+          <line>70</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Employee\AddEmployeeService.cs" initialLine="70" containingFunctionPresentation="method 'EditEmployee'">
+            <startOffsets>
+              <option value="2397" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2413" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs</url>
+          <line>54</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Employee\AddEmployeeService.cs" initialLine="54" containingFunctionPresentation="method 'EditEmployee'">
+            <startOffsets>
+              <option value="1788" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1873" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs</url>
+          <line>59</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Employee\AddEmployeeService.cs" initialLine="59" containingFunctionPresentation="method 'EditEmployee'">
+            <startOffsets>
+              <option value="2061" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2105" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs</url>
+          <line>56</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Employee\AddEmployeeService.cs" initialLine="56" containingFunctionPresentation="method 'EditEmployee'">
+            <startOffsets>
+              <option value="1944" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1978" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs</url>
+          <line>91</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Employee\AddEmployeeService.cs" initialLine="91" containingFunctionPresentation="method 'GetEmployee'">
+            <startOffsets>
+              <option value="3079" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3096" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs</url>
+          <line>82</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Employee\AddEmployeeService.cs" initialLine="82" containingFunctionPresentation="method 'GetEmployee'">
+            <startOffsets>
+              <option value="2806" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2846" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="61" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs</url>
+          <line>80</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Employee\AddEmployeeService.cs" initialLine="80" containingFunctionPresentation="method 'GetEmployee'">
+            <startOffsets>
+              <option value="2708" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2740" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs</url>
+          <line>64</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Employee\EmployeeController.cs" initialLine="64" containingFunctionPresentation="method 'Edit'">
+            <startOffsets>
+              <option value="2092" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2123" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs</url>
+          <line>63</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Employee\EmployeeController.cs" initialLine="63" containingFunctionPresentation="method 'Edit'">
+            <startOffsets>
+              <option value="2044" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2079" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="64" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs</url>
+          <line>58</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Employee\EmployeeController.cs" initialLine="58" containingFunctionPresentation="method 'Edit'">
+            <startOffsets>
+              <option value="1853" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1885" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="65" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

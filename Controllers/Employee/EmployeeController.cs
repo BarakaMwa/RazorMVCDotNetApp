@@ -112,16 +112,14 @@ namespace RazorMVCDotNetApp.Controllers.Employee
             //otherwise return the model to Index view
             if (ModelState.IsValid)
             {
-                // var employee = new EmployeeModel();
-                var employee = new EmployeeModel();
                 try
                 {
                     iEmployeeService = new AddEmployeeService();
-                    employee = iEmployeeService.EditEmployee(employeeDto);
-                    if (employee == null)
+                    var employee = iEmployeeService.EditEmployee(employeeDto);
+                    if (employee.Id == 0)
                     {
                         response.Add("status","error");
-                        response.Add("message","Failed to save the data due to an error in Service.");
+                        response.Add("message","Failed to Edit the data due to an error in Service.");
                         return Json(response);
                     }
                     response.Add("status","success");
