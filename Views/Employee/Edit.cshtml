@@ -3,8 +3,8 @@
 @model RazorMVCDotNetApp.Dto.Employee.EmployeeDto;
 @{
     ViewData["Title"] = "Edit Department";
-    var employee = (EmployeeDto)ViewData["Employee"];
-    var departments = (List<DepartmentDto>)ViewData["Departments"];
+    var employee = (EmployeeDto) ViewData["Employee"];
+    var departments = (List<DepartmentDto>) ViewData["Departments"];
 }
 <div class="row">
     <div class="col-12 col-lg-9">
@@ -13,6 +13,8 @@
         </h3>
     </div>
     <div class="col-12 col-lg-3">
+        <a class="btn-info btn-sm btn ml-3" asp-action="Index" asp-controller="Employee">View Employees</a>
+        <a class="btn-info btn-sm btn ml-3" asp-action="Add" asp-controller="Employee">Add Employee</a>
     </div>
 </div>
 <form asp-controller="Employee" asp-action="EditEmployee" class="m-2 row g-3 needs-validation" id="editEmployeeForm" novalidate method="post">
@@ -40,15 +42,19 @@
         </div>
     </div>
 
+    <div class="col-md-4 hidden" hidden>
+        <input type="text" asp-for="IdEncryption" class="form-control" id="IdEncryption" value="@employee.IdEncryption" required hidden>
+    </div>
+
     <div class="col-md-4">
-        <label for="DepartmentId" class="form-label">Select Department</label>
-        <select asp-for="DepartmentId" class="form-control" id="DepartmentId">
+        <label for="DeptIdEncryption" class="form-label">Select Department</label>
+        <select asp-for="DeptIdEncryption" class="form-control" id="DeptIdEncryption" required>
             <option>Select Department</option>
             @foreach (var item in departments)
             {
                 if (item.Id == employee.DepartmentId)
                 {
-                    <option value="@item.IdEncryption" selected>@item.Name</option> 
+                    <option value="@item.IdEncryption" selected>@item.Name</option>
                 }
                 else
                 {
@@ -172,7 +178,7 @@ function bsValidate(){
                                                       },
                                                       function () {
                                                           $(".confirm").attr('disabled', 'disabled');
-                                                          window.location.href = "/Employee/Add";
+                                                          window.location.href = "/Employee";
                                                       });
                               
                                               } else {

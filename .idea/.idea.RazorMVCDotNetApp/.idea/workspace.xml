@@ -7,8 +7,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dto/Employee/EmployeeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/Employee/EmployeeDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Department/Add.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Add.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Department/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Employee/Add.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Add.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +110,7 @@
       <workItem from="1647769171338" duration="20005000" />
       <workItem from="1647842442951" duration="9173000" />
       <workItem from="1647855214700" duration="12291000" />
-      <workItem from="1647898901438" duration="47007000" />
+      <workItem from="1647898901438" duration="48818000" />
     </task>
     <task id="LOCAL-00001" summary="Razor Init">
       <created>1647553821256</created>

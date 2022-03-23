@@ -22,6 +22,6 @@ namespace RazorMVCDotNetApp.Dto.Employee
         
         public string? DepartmentName{set; get;}
         
-        public string IdEncryption { get; set; }
+        public string? IdEncryption { get; set; }
     }
 }
