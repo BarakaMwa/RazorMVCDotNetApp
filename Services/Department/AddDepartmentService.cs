@@ -126,6 +126,13 @@ namespace RazorMVCDotNetApp.Services.Department
             return departments;
         }
 
+        public string AddSlashes(string id)
+        {
+            id = id.Replace("qWeRtY", "\\");
+            id = id.Replace("QwErTy", "/");
+            return id;
+        }
+
         public DepartmentModel DeleteDepartment(string id)
         {
             var department = new DepartmentModel();

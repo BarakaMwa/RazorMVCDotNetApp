@@ -178,6 +178,41 @@ namespace RazorMVCDotNetApp.Controllers.Employee
             departmentDtos.Add(departmentDto);
         }
 
+        public IActionResult Delete(string id)
+        {
+            var response = new Dictionary<string, object>();
+            //Editing IService Function Called here
+            //Check if the model is valid and proceed with saving the data
+            //otherwise return the model to Index view
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    iEmployeeService = new AddEmployeeService();
+                    var employee = iEmployeeService.DeleteEmployee(id);
+                    if (employee.Id == 0)
+                    {
+                        response.Add("status", "error");
+                        response.Add("message", "Failed to Delete the data due to an error in Service.");
+                        return Json(response);
+                    }
+
+                    response.Add("status", "success");
+                    response.Add("message", "Employee Deleted Successfully");
+                    return Json(response);
+                }
+                catch (Exception ex)
+                {
+                    response.Add("status", "error");
+                    response.Add("message", "Failed to Delete the data due to an error In Controller.");
+                    response.Add("errorMessage", ex.InnerException != null ? ex.InnerException.Message : ex.Message);
+                    return Json(response);
+                }
+            }
+            response.Add("status", "error");
+            response.Add("message", "Invalid Inputs " + ModelState.Values);
+            return Json(response);
+        }
         
     }
 }

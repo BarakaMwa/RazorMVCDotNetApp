@@ -163,5 +163,13 @@ namespace RazorMVCDotNetApp.Employee.Services
 
             return employee;
         }
+        
+        public string AddSlashes(string id)
+        {
+            id = id.Replace("qWeRtY", "\\");
+            id = id.Replace("QwErTy", "/");
+            return id;
+        }
+        
     }
 }

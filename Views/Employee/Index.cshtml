@@ -59,11 +59,14 @@ $(document).ready(function() {
                                   }]
     } );
     
-            $('#employeesTable tbody').on('click', '.btn-delete', function () {
+            let $employeesTable = $('#employeesTable tbody');
+            
+            $employeesTable.on('click', '.btn-delete', function () {
     
                 var data = employeesTable.row($(this).parents('tr')).data();
     
-                var url = '/Employee/Delete/'+data['id'];
+                // var url = '/Employee/Delete/'+ replaceSlashes(data['id']);
+                var url = '/Employee/Delete/'+ data['id'];
                 
                 var type = 'get';                
                 
@@ -87,9 +90,10 @@ $(document).ready(function() {
     
             });
     
-            $('#employeesTable tbody').on('click', '.btn-edit', function () {
+            $employeesTable.on('click', '.btn-edit', function () {
                 var data = employeesTable.row($(this).parents('tr')).data();
     
+                // window.location.href = '/Employee/Edit/' + replaceSlashes(data['id']);
                 window.location.href = '/Employee/Edit/' + data['id'];
     
             });
@@ -162,5 +166,13 @@ $(document).ready(function() {
                         }
                         swal("Error", msg, "error");
                     }
+                    
+            function replaceSlashes(input){
+                
+                var output = input.replace("/", "QwErTy");
+                output = output.replace("\\", "qWeRtY");
+                
+                return output;
+            }
 } );
 </script>

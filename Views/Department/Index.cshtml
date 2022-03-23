@@ -53,7 +53,9 @@ $(document).ready(function() {
                                   }]
     } );
     
-            $('#departmentsTable tbody').on('click', '.btn-delete', function () {
+            let $departmentsTable = $('#departmentsTable tbody');
+            
+            $departmentsTable.on('click', '.btn-delete', function () {
     
                 var data = departmentsTable.row($(this).parents('tr')).data();
     
@@ -84,7 +86,7 @@ $(document).ready(function() {
     
             });
     
-            $('#departmentsTable tbody').on('click', '.btn-edit', function () {
+            $departmentsTable.on('click', '.btn-edit', function () {
                 var data = departmentsTable.row($(this).parents('tr')).data();
     
                 window.location.href = '/Department/Edit/' + data['id'];
