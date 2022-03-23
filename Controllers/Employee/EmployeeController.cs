@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RazorMVCDotNetApp.Commons;
 using RazorMVCDotNetApp.Dao.Department;
 using RazorMVCDotNetApp.Dto;
+using RazorMVCDotNetApp.Dto.Department;
 using RazorMVCDotNetApp.Dto.Employee;
 using RazorMVCDotNetApp.Employee.Services;
 using RazorMVCDotNetApp.Interfaces.Employee;
@@ -17,6 +19,7 @@ namespace RazorMVCDotNetApp.Controllers.Employee
         private IEmployeeService iEmployeeService;
         private DepartmentDao departmentDao;
         private EmployeeDto employeeDto;
+        private CryptoEngine cryptoEngine;
 
         public EmployeeController()
         {
@@ -40,17 +43,28 @@ namespace RazorMVCDotNetApp.Controllers.Employee
         public IActionResult Edit(string id)
         {
             //Populate ViewBag with Departments Data
+            var departments = new List<DepartmentModel>();
+            var departmentDtos = new List<DepartmentDto>();
             departmentDao = new DepartmentDao();
-            ViewData["Departments"] = departmentDao.FindAll();
+            departments = departmentDao.FindAll();
+
+            foreach (var item in departments)
+            {
+                DeptModelToDto(item, departmentDtos);
+            }
+
+            ViewData["Departments"] = departmentDtos;
             //View with Employee details
             iEmployeeService = new AddEmployeeService();
             employeeDto = new EmployeeDto();
             List<EmployeeModel> employees = iEmployeeService.GetEmployee(id);
-            employeeDto.IdEncryption = id;
+            
+            EmpModelToDto(id, employees);
+            
             ViewData["Employee"] = employeeDto;
             return View(new EmployeeDto());
         }
-        
+
         [HttpPost]
         public IActionResult AddEmployee(EmployeeDto employeeDto)
         {
@@ -143,6 +157,29 @@ namespace RazorMVCDotNetApp.Controllers.Employee
             
             return Json(response);
         }
+        
+        private void EmpModelToDto(string id, List<EmployeeModel> employees)
+        {
+            employeeDto.IdEncryption = id;
+            employeeDto.FirstName = employees[0].FirstName;
+            employeeDto.LastName = employees[0].LastName;
+            employeeDto.DepartmentId = employees[0].DepartmentId;
+            var deptIdStr = cryptoEngine.Encrypt(employees[0].DepartmentId.ToString(), "qwer-3qa8-asdf21");
+            employeeDto.DeptIdEncryption = deptIdStr;
+        }
+
+        private void DeptModelToDto(DepartmentModel item, List<DepartmentDto> departmentDtos)
+        {
+            var departmentDto = new DepartmentDto();
+
+            cryptoEngine = new CryptoEngine();
+            departmentDto.IdEncryption = cryptoEngine.Encrypt(item.Id.ToString(), "qwer-3qa8-asdf21");
+            departmentDto.Name = item.Name;
+            departmentDto.Id = item.Id;
+
+            departmentDtos.Add(departmentDto);
+        }
+
         
     }
 }

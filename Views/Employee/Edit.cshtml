@@ -44,15 +44,15 @@
         <label for="DepartmentId" class="form-label">Select Department</label>
         <select asp-for="DepartmentId" class="form-control" id="DepartmentId">
             <option>Select Department</option>
-            @foreach (var d in departments)
+            @foreach (var item in departments)
             {
-                if (d.Id == employee.DepartmentId)
+                if (item.Id == employee.DepartmentId)
                 {
-                    <option value="@d.IdEncryption">@d.Name</option> 
+                    <option value="@item.IdEncryption" selected>@item.Name</option> 
                 }
                 else
                 {
-                    <option value="@d.IdEncryption">@d.Name</option>
+                    <option value="@item.IdEncryption">@item.Name</option>
                 }
             }
         </select>

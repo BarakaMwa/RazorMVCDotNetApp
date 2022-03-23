@@ -7,15 +7,9 @@
   <component name="ChangeListManager">
     <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Department/DepartmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Department/DepartmentController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dao/Employee/EmployeeDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/Employee/EmployeeDao.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dto/Employee/EmployeeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/Employee/EmployeeDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Interfaces/Employee/IEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/Employee/IEmployeeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Department/AddDepartmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Department/AddDepartmentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Department/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Employee/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +37,10 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/954b64bc4e87439dbdccacd21a67d66216b578/157/SingleQueryingEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2a86cc865c7648b4a484ca6781ab76f4c1698/B0/ViewDataDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/mwangamb/RiderProjects/RazorMVCDotNetApp/Controllers/Employee/EmployeeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/29/RazorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/2D/RazorPageOfT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/mwangamb/RiderProjects/RazorMVCDotNetApp/Controllers/Employee/EmployeeController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/16e6dcaab0be4156ad31af88b1ed8700a20698/FB/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="26W7I9hHHlKnd8FEjHs9pfgqVIY" />
@@ -112,7 +108,7 @@
       <workItem from="1647769171338" duration="20005000" />
       <workItem from="1647842442951" duration="9173000" />
       <workItem from="1647855214700" duration="12291000" />
-      <workItem from="1647898901438" duration="44361000" />
+      <workItem from="1647898901438" duration="47007000" />
     </task>
     <task id="LOCAL-00001" summary="Razor Init">
       <created>1647553821256</created>

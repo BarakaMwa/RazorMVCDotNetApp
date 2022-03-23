@@ -18,7 +18,7 @@ namespace RazorMVCDotNetApp.Dto.Employee
         [Required(ErrorMessage = "{0} is Required")]
         public int DepartmentId{set; get;}
 
-        public string? DepartmentIdEncryption{set; get;}
+        public string? DeptIdEncryption{set; get;}
         
         public string? DepartmentName{set; get;}
         
