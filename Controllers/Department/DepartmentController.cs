@@ -44,6 +44,47 @@ namespace RazorMVCDotNetApp.Controllers.Department
         }
 
         [HttpPost]
+        public IActionResult AddDepartment(DepartmentDto departmentDto)
+        {
+            //Declare the response object
+            var response = new Dictionary<string, object>();
+            //Check if the model is valid and proceed with saving the data
+            //otherwise return the model to Index view
+            if (ModelState.IsValid)
+            {
+                var department = new DepartmentModel();
+                try
+                {
+                    iDepartmentService = new AddDepartmentService();
+                    department = iDepartmentService.AddDepartment(departmentDto);
+                    if (department.Name == null)
+                    {
+                        response.Add("status", "error");
+                        response.Add("message", "Failed to save the data due to an error in Service.");
+                        return Json(response);
+                    }
+
+                    response.Add("status", "success");
+                    response.Add("message", "Department Saved Successfully");
+                    return Json(response);
+                }
+                catch (Exception ex)
+                {
+                    response.Add("status", "error");
+                    response.Add("message", "Failed to save the data due to an error In Controller.");
+                    response.Add("errorMessage", ex.InnerException != null ? ex.InnerException.Message : ex.Message);
+                    return Json(response);
+                }
+            }
+
+            // ViewData["Departments"] = DepartmentDao.FindAll();
+            // return View("Add",departmentDto);
+            response.Add("status", "error");
+            response.Add("message", "Invalid Inputs " + ModelState.Values);
+            return Json(response);
+        }
+
+        [HttpPost]
         public IActionResult EditDepartment(DepartmentDto departmentDto)
         {
             var response = new Dictionary<string, object>();
@@ -111,47 +152,6 @@ namespace RazorMVCDotNetApp.Controllers.Department
                 {
                     response.Add("status", "error");
                     response.Add("message", "Failed to Delete the data due to an error In Controller.");
-                    response.Add("errorMessage", ex.InnerException != null ? ex.InnerException.Message : ex.Message);
-                    return Json(response);
-                }
-            }
-
-            // ViewData["Departments"] = DepartmentDao.FindAll();
-            // return View("Add",departmentDto);
-            response.Add("status", "error");
-            response.Add("message", "Invalid Inputs " + ModelState.Values);
-            return Json(response);
-        }
-
-        [HttpPost]
-        public IActionResult AddDepartment(DepartmentDto departmentDto)
-        {
-            //Declare the response object
-            var response = new Dictionary<string, object>();
-            //Check if the model is valid and proceed with saving the data
-            //otherwise return the model to Index view
-            if (ModelState.IsValid)
-            {
-                var department = new DepartmentModel();
-                try
-                {
-                    iDepartmentService = new AddDepartmentService();
-                    department = iDepartmentService.AddDepartment(departmentDto);
-                    if (department.Name == null)
-                    {
-                        response.Add("status", "error");
-                        response.Add("message", "Failed to save the data due to an error in Service.");
-                        return Json(response);
-                    }
-
-                    response.Add("status", "success");
-                    response.Add("message", "Department Saved Successfully");
-                    return Json(response);
-                }
-                catch (Exception ex)
-                {
-                    response.Add("status", "error");
-                    response.Add("message", "Failed to save the data due to an error In Controller.");
                     response.Add("errorMessage", ex.InnerException != null ? ex.InnerException.Message : ex.Message);
                     return Json(response);
                 }

@@ -58,8 +58,7 @@ namespace RazorMVCDotNetApp.Services.Department
 
             return department;
         }
-
-        // public List<DepartmentModel> GetDepartments(SearchDto searchDto)
+        
         public List<Object> GetDepartments(SearchDto searchDto)
         {
             var departmentList = new List<Object>();
@@ -92,7 +91,7 @@ namespace RazorMVCDotNetApp.Services.Department
                 Console.WriteLine("Error Occured!! ");
                 Console.WriteLine("Error Details : ");
                 Console.WriteLine(ex);
-                departments.Clear();
+                departmentList.Clear();
             }
 
             return departmentList;
@@ -108,14 +107,14 @@ namespace RazorMVCDotNetApp.Services.Department
 
         public List<DepartmentModel> GetDepartment(string id)
         {
-            var department = new List<DepartmentModel>();
+            var departments = new List<DepartmentModel>();
             cryptoEngine = new CryptoEngine();
             try
             {
                 id = cryptoEngine.Decrypt(id, "qwer-3qa8-asdf21");
                 int idInt = Convert.ToInt32(id);
                 departmentDao = new DepartmentDao();
-                department = departmentDao.FindById(idInt);
+                departments = departmentDao.FindById(idInt);
             }
             catch (Exception ex)
             {
@@ -124,7 +123,7 @@ namespace RazorMVCDotNetApp.Services.Department
                 Console.WriteLine(ex);
             }
 
-            return department;
+            return departments;
         }
 
         public DepartmentModel DeleteDepartment(string id)

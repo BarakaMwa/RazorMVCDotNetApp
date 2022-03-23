@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using RazorMVCDotNetApp.Dto;
 using RazorMVCDotNetApp.Dto.Employee;
 using RazorMVCDotNetApp.Models;
 
@@ -9,10 +11,14 @@ namespace RazorMVCDotNetApp.Interfaces.Employee
         EmployeeModel AddEmployee(EmployeeDto employeeDto);
         
         EmployeeModel EditEmployee(EmployeeDto employeeDto);
-
-        EmployeeModel FindById(int id);
         
         List<EmployeeModel> FindAll();
+
+        List<EmployeeModel>  GetEmployee(string id);
+        
+        List<Object> GetEmployees(SearchDto searchDto);
+        
+        EmployeeModel DeleteEmployee(string id);
         
     }
 }

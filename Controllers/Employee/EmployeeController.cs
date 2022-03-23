@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using RazorMVCDotNetApp.Dao.Department;
+using RazorMVCDotNetApp.Dto;
 using RazorMVCDotNetApp.Dto.Employee;
 using RazorMVCDotNetApp.Employee.Services;
 using RazorMVCDotNetApp.Interfaces.Employee;
@@ -15,6 +16,7 @@ namespace RazorMVCDotNetApp.Controllers.Employee
         private readonly ILogger<HomeController> _logger;
         private IEmployeeService iEmployeeService;
         private DepartmentDao departmentDao;
+        private EmployeeDto employeeDto;
 
         public EmployeeController()
         {
@@ -35,9 +37,18 @@ namespace RazorMVCDotNetApp.Controllers.Employee
             return View(new EmployeeDto());
         }
         
-        public IActionResult Edit()
+        public IActionResult Edit(string id)
         {
-            return View();
+            //Populate ViewBag with Departments Data
+            departmentDao = new DepartmentDao();
+            ViewData["Departments"] = departmentDao.FindAll();
+            //View with Employee details
+            iEmployeeService = new AddEmployeeService();
+            employeeDto = new EmployeeDto();
+            List<EmployeeModel> employees = iEmployeeService.GetEmployee(id);
+            employeeDto.IdEncryption = id;
+            ViewData["Employee"] = employeeDto;
+            return View(new EmployeeDto());
         }
         
         [HttpPost]
@@ -92,7 +103,7 @@ namespace RazorMVCDotNetApp.Controllers.Employee
                 try
                 {
                     iEmployeeService = new AddEmployeeService();
-                    employee = iEmployeeService.AddEmployee(employeeDto);
+                    employee = iEmployeeService.EditEmployee(employeeDto);
                     if (employee == null)
                     {
                         response.Add("status","error");
@@ -114,6 +125,22 @@ namespace RazorMVCDotNetApp.Controllers.Employee
 
             response.Add("status","error");
             response.Add("message","Invalid Inputs " + ModelState.Values);
+            return Json(response);
+        }
+
+        [HttpPost]
+        public IActionResult GetTopHundred(SearchDto searchDto)
+        {
+            var response = new Dictionary<string, object>();
+
+            iEmployeeService = new AddEmployeeService();
+            var employees = iEmployeeService.GetEmployees(searchDto);
+            
+            response.Add("data", employees);
+            response.Add("recordsTotal", employees.Count);
+            response.Add("recordsFiltered", employees.Count);
+            response.Add("draw", searchDto.draw);
+            
             return Json(response);
         }
         

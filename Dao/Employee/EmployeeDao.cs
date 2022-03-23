@@ -1,4 +1,6 @@
-﻿using Data.DataBaseConnection;
+﻿using System.Collections.Generic;
+using System.Linq;
+using Data.DataBaseConnection;
 using RazorMVCDotNetApp.Models;
 
 namespace RazorMVCDotNetApp.Dao.Employee
@@ -16,5 +18,40 @@ namespace RazorMVCDotNetApp.Dao.Employee
 
             return employee;
         }
+
+        public List<EmployeeModel> FindAll()
+        {
+            return con.Employee.OrderBy(d=>d.Id).ToList();
+        }
+
+        public List<EmployeeModel> FindContaining(string search)
+        {
+            return con.Employee.Where(d=>d.FirstName.Contains(search) || d.LastName.Contains(search)).ToList();
+        }
+        
+        public List<EmployeeModel> FindTopHundred()
+        {
+            return con.Employee.OrderBy(d=>d.Id).Take(100).ToList();
+        }
+
+        public List<EmployeeModel> FindById(int id)
+        {
+            return con.Employee.Where(d => d.Id == id).ToList();
+        }
+        
+        public EmployeeModel Update(EmployeeModel employee)
+        {
+            con.Employee.Update(employee);
+            con.SaveChanges();
+            return employee;
+        }
+
+        public EmployeeModel Delete(EmployeeModel employee)
+        {
+            con.Employee.Remove(employee);
+            con.SaveChanges();
+            return employee;
+        }
+        
     }
 }
