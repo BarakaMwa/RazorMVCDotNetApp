@@ -17,5 +17,7 @@ namespace RazorMVCDotNetApp.Interfaces.Department
         List<Object> GetDepartments(SearchDto searchDto);
         
         List<DepartmentModel> GetDepartment(string id);
+        
+        DepartmentModel DeleteDepartment(string id);
     }
 }

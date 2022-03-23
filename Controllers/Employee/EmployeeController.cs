@@ -78,18 +78,17 @@ namespace RazorMVCDotNetApp.Controllers.Employee
             return Json(response);
         }
         
-        /*[HttpPost]
+        [HttpPost]
         public IActionResult EditEmployee(EmployeeDto employeeDto)
         {
             //Declare the response object
-            Dictionary<String,Object> response = new Dictionary<string, object>();
+            var response = new Dictionary<string, object>();
             //Check if the model is valid and proceed with saving the data
             //otherwise return the model to Index view
             if (ModelState.IsValid)
             {
                 // var employee = new EmployeeModel();
-                iEmployeeService = new EditEmployeeService();
-                var employee = 
+                var employee = new EmployeeModel();
                 try
                 {
                     iEmployeeService = new AddEmployeeService();
@@ -116,6 +115,7 @@ namespace RazorMVCDotNetApp.Controllers.Employee
             response.Add("status","error");
             response.Add("message","Invalid Inputs " + ModelState.Values);
             return Json(response);
-        }*/
+        }
+        
     }
 }

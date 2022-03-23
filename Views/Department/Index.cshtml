@@ -2,6 +2,15 @@
     ViewData["Title"] = "View Departments";
     // var departments = (List<DepartmentModel>) ViewData["Departments"];
 }
+<div class="row">
+    <div class="col-12 col-lg-9">
+        <h3 class="mbr-section-title mbr-fonts-style align-left mb-0 display-2">
+            <strong>View Departments</strong>
+        </h3>
+    </div>
+    <div class="col-12 col-lg-3">
+    </div>
+</div>
 <div class="p-2">
     <table id="departmentsTable" class="table table-hover table-responsive" style="width:100%">
         <thead>
@@ -20,7 +29,7 @@
 </div>
 <script>
 $(document).ready(function() {
-         
+    
     var departmentsTable = $('#departmentsTable').DataTable( {
         "processing": true,
                     "serverSide": true,
@@ -47,16 +56,21 @@ $(document).ready(function() {
     
                 var data = departmentsTable.row($(this).parents('tr')).data();
     
-                var url = '/Department/Delete';                
+                var url = '/Department/Delete/'+data['id'];                
                 
-                var contentType = "application/x-www-form-urlencoded";
+                var contentType = "application/x-www-form-urlencoded"
+                
+                var type = "get";
     
+                // var postingData = {IdEncryption: data['id']}
                 var postingData = new FormData();
-                postingData.append('deptId', data['id']);
+                postingData.append("IdEncryption", data['id']);
+                /*var data = postingData.serialize();
+                console.log(data)*/
     
                 swal({
                     title: "Confirm",
-                    text: "Delete User?",
+                    text: "Delete Department?",
                     type: "info",
                     showCancelButton: true,
                     confirmButtonClass: "btn-danger",
@@ -64,7 +78,7 @@ $(document).ready(function() {
                     closeOnConfirm: false
                 }, function () {
                     $(".confirm").attr('disabled', 'disabled');
-                    submittingData(url, postingData, contentType);
+                    submittingData(url, postingData, contentType, type);
                 });
     
             });
@@ -76,12 +90,17 @@ $(document).ready(function() {
     
             });
     
-            function submittingData(url, postingData, contentType) {
+            function submittingData(url, postingData, contentType, type) {
             
+                if(type == undefined || type == null)
+                {
+                    type = "post";
+                }
+                
                         $.ajax({
-                            url: url,
-                            type: "post",
-                            data: postingData,
+                            url: url,                            
+                            type: type,
+                            // data: postingData,
                             datatype: 'json',
                             enctype: 'multipart/form-data',
                             processData: false,
@@ -89,13 +108,11 @@ $(document).ready(function() {
                             cache: false,
                             success: function (response) {
                                 console.log(response);
-                                var results = JSON.parse("[" + response + "]");
-                                console.log(results);
-                                switch (results[0].status) {
+                                switch (response.status) {
                                     case "success":
                                         swal({
                                                 title: "Success",
-                                                text: results[0].message,
+                                                text: response.message,
                                                 type: "success",
                                                 showCancelButton: false,
                                                 confirmButtonClass: "btn-primary",
@@ -103,17 +120,17 @@ $(document).ready(function() {
                                                 closeOnConfirm: true
                                             },
                                             function () {
-            
+                                                window.location.href = "/Department";
                                             });
                                         break;
                                     case "warning" :
-                                        swal("Warning", results[0].message, "warning");
+                                        swal("Warning", response.message, "warning");
                                         break;
                                     case "error" :
-                                        swal("Error", results[0].message, "error");
+                                        swal("Error", response.message, "error");
                                         break;
                                     default:
-                                        swal("System Error!", results[0].message, "error");
+                                        swal("System Error!", response.message, "error");
                                 }
                             }, error: function (jqXHR, exception) {
                                 getErrorMessage(jqXHR, exception);

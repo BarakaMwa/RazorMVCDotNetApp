@@ -7,12 +7,21 @@
   <component name="ChangeListManager">
     <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Commons/DataEncrypterDecrypter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Commons/CryptoEngine.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Controllers/Department/DepartmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Department/DepartmentController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dao/Department/DepartmentDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/Department/DepartmentDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/Department/DepartmentDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/Department/DepartmentDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/Employee/EmployeeDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/Employee/EmployeeDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dto/SearchDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dto/SearchDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Interfaces/Department/IDepartmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Interfaces/Department/IDepartmentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Models/DepartmentModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Models/DepartmentModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Services/Department/AddDepartmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Department/AddDepartmentService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Department/Add.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Add.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Department/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Department/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Employee/Add.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Add.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Employee/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Index.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +47,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/954b64bc4e87439dbdccacd21a67d66216b578/157/SingleQueryingEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2a86cc865c7648b4a484ca6781ab76f4c1698/B0/ViewDataDictionary.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/29/RazorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/2D/RazorPageOfT.cs" root0="SKIP_HIGHLIGHTING" />
@@ -108,7 +118,7 @@
       <workItem from="1647769171338" duration="20005000" />
       <workItem from="1647842442951" duration="9173000" />
       <workItem from="1647855214700" duration="12291000" />
-      <workItem from="1647898901438" duration="18452000" />
+      <workItem from="1647898901438" duration="37406000" />
     </task>
     <task id="LOCAL-00001" summary="Razor Init">
       <created>1647553821256</created>
@@ -144,13 +154,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>65</line>
+          <line>138</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="45" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="2104" />
+              <option value="3721" />
             </startOffsets>
             <endOffsets>
-              <option value="2165" />
+              <option value="3782" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
@@ -225,10 +235,10 @@
           <line>26</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="21" containingFunctionPresentation="method 'Index'">
             <startOffsets>
-              <option value="765" />
+              <option value="790" />
             </startOffsets>
             <endOffsets>
-              <option value="779" />
+              <option value="804" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="7" />
@@ -238,101 +248,101 @@
           <line>31</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="26" containingFunctionPresentation="method 'Add'">
             <startOffsets>
-              <option value="856" />
+              <option value="881" />
             </startOffsets>
             <endOffsets>
-              <option value="889" />
+              <option value="914" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>70</line>
+          <line>143</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="50" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="2420" />
+              <option value="4037" />
             </startOffsets>
             <endOffsets>
-              <option value="2442" />
+              <option value="4059" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>74</line>
+          <line>148</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="54" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="2616" />
+              <option value="4233" />
             </startOffsets>
             <endOffsets>
-              <option value="2638" />
+              <option value="4255" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>66</line>
+          <line>139</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="49" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="2143" />
+              <option value="3760" />
             </startOffsets>
             <endOffsets>
-              <option value="2225" />
+              <option value="3842" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>56</line>
+          <line>129</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="38" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="1670" />
+              <option value="3312" />
             </startOffsets>
             <endOffsets>
-              <option value="1740" />
+              <option value="3357" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>59</line>
+          <line>132</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="41" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="1883" />
+              <option value="3500" />
             </startOffsets>
             <endOffsets>
-              <option value="1906" />
+              <option value="3523" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>81</line>
+          <line>155</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="61" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="2998" />
+              <option value="4615" />
             </startOffsets>
             <endOffsets>
-              <option value="3020" />
+              <option value="4637" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>62</line>
+          <line>135</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="43" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="1993" />
+              <option value="3610" />
             </startOffsets>
             <endOffsets>
-              <option value="3038" />
+              <option value="4655" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
@@ -468,19 +478,6 @@
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>105</line>
-          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="94" containingFunctionPresentation="method 'GetTopHundred'">
-            <startOffsets>
-              <option value="3888" />
-            </startOffsets>
-            <endOffsets>
-              <option value="3910" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Dao/Department/DepartmentDao.cs</url>
           <line>31</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Dao\Department\DepartmentDao.cs" initialLine="31" containingFunctionPresentation="method 'FindContaining'">
@@ -494,66 +491,40 @@
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>37</line>
-          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="37" containingFunctionPresentation="method 'Edit'">
-            <startOffsets>
-              <option value="1037" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1110" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
-          <line>39</line>
-          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="39" containingFunctionPresentation="method 'Edit'">
-            <startOffsets>
-              <option value="1175" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1208" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Department/AddDepartmentService.cs</url>
-          <line>93</line>
+          <line>110</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Department\AddDepartmentService.cs" initialLine="93" containingFunctionPresentation="method 'GetDepartment'">
             <startOffsets>
-              <option value="2940" />
+              <option value="3582" />
             </startOffsets>
             <endOffsets>
-              <option value="2985" />
+              <option value="3627" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Department/AddDepartmentService.cs</url>
-          <line>101</line>
+          <line>117</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Department\AddDepartmentService.cs" initialLine="100" containingFunctionPresentation="method 'GetDepartment'">
             <startOffsets>
-              <option value="3265" />
+              <option value="3890" />
             </startOffsets>
             <endOffsets>
-              <option value="3308" />
+              <option value="3933" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="39" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Department/AddDepartmentService.cs</url>
-          <line>110</line>
+          <line>126</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Department\AddDepartmentService.cs" initialLine="109" containingFunctionPresentation="method 'GetDepartment'">
             <startOffsets>
-              <option value="3543" />
+              <option value="4168" />
             </startOffsets>
             <endOffsets>
-              <option value="3561" />
+              <option value="4186" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="40" />
@@ -570,6 +541,84 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
+          <line>88</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="89" containingFunctionPresentation="method 'Delete'">
+            <startOffsets>
+              <option value="3237" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3285" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
+          <line>92</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="93" containingFunctionPresentation="method 'Delete'">
+            <startOffsets>
+              <option value="3480" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3503" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
+          <line>97</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="98" containingFunctionPresentation="method 'Delete'">
+            <startOffsets>
+              <option value="3645" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3702" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
+          <line>107</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="108" containingFunctionPresentation="method 'Delete'">
+            <startOffsets>
+              <option value="4157" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4179" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
+          <line>102</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="103" containingFunctionPresentation="method 'Delete'">
+            <startOffsets>
+              <option value="3956" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3978" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Controllers/Department/DepartmentController.cs</url>
+          <line>114</line>
+          <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Controllers\Department\DepartmentController.cs" initialLine="115" containingFunctionPresentation="method 'Delete'">
+            <startOffsets>
+              <option value="4549" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4571" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

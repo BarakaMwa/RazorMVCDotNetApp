@@ -1,1 +1,208 @@
-﻿
+﻿@using RazorMVCDotNetApp.Dto.Employee
+@using RazorMVCDotNetApp.Dto.Department
+@model RazorMVCDotNetApp.Dto.Employee.EmployeeDto;
+@{
+    ViewData["Title"] = "Edit Department";
+    var employee = (EmployeeDto)ViewData["Employee"];
+    var departments = (List<DepartmentDto>)ViewData["Departments"];
+}
+<div class="row">
+    <div class="col-12 col-lg-9">
+        <h3 class="mbr-section-title mbr-fonts-style align-left mb-0 display-2">
+            <strong>Edit/View Employee</strong>
+        </h3>
+    </div>
+    <div class="col-12 col-lg-3">
+    </div>
+</div>
+<form asp-controller="Employee" asp-action="EditEmployee" class="m-2 row g-3 needs-validation" id="editEmployeeForm" novalidate method="post">
+    <div class="col-md-4">
+        <label for="FirstName" class="form-label">First Name</label>
+        <input type="text" asp-for="FirstName" class="form-control" id="FirstName" value="@employee.FirstName" required>
+        <span asp-validation-for="FirstName" class="text-danger"></span>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Not Valid
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label for="LastName" class="form-label">Last Name</label>
+        <input type="text" asp-for="LastName" class="form-control" id="LastName" value="@employee.LastName" required>
+        <span asp-validation-for="LastName" class="text-danger"></span>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Not Valid
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label for="DepartmentId" class="form-label">Select Department</label>
+        <select asp-for="DepartmentId" class="form-control" id="DepartmentId">
+            <option>Select Department</option>
+            @foreach (var d in departments)
+            {
+                if (d.Id == employee.DepartmentId)
+                {
+                    <option value="@d.IdEncryption">@d.Name</option> 
+                }
+                else
+                {
+                    <option value="@d.IdEncryption">@d.Name</option>
+                }
+            }
+        </select>
+        <span asp-validation-for="DepartmentId" class="text-danger"></span>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Not Valid
+        </div>
+    </div>
+    <div class="col-12">
+        <input type="submit" id="btnSubmit" class="btn btn-primary" value="Save"/>
+    </div>
+</form>
+<script>
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+        
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+
+function bsValidate(){
+    'use strict'
+    
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.querySelectorAll('.needs-validation')
+    
+      // Loop over them and prevent submission
+      Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault()
+              event.stopPropagation()
+            }
+    
+            form.classList.add('was-validated')
+          }, false)
+        })
+}
+
+</script>
+<script>
+ $(document).ready(function () { 
+     $(document).on("submit", "#editEmployeeForm", function (e) {
+        // $("#addDepartmentForm").submit(function (e) {  
+            e.preventDefault()                          
+            //Serialize the form datas. 
+            var data = $(this).serialize();     
+            if ($(this)[0].checkValidity()) {
+            
+                        swal({
+                            title: "Confirm",
+                            text: "Proceed?",
+                            type: "info",
+                            showCancelButton: true,
+                            confirmButtonClass: "btn-danger",
+                            confirmButtonText: "Yes",
+                            closeOnConfirm: false
+                        }, 
+                        function () {
+                            $(".confirm").attr('disabled', 'disabled');
+                            submitData(data);
+                        });
+            
+                    }
+            else {
+            
+                        swal({
+                            title: "Invalid Inputs",
+                            text: "Please Provide Valid Data : " + $(this)[0].validationMessage,
+                            type: "warning",
+                            showCancelButton: true,
+                            confirmButtonClass: "btn-danger",
+                            closeOnConfirm: false
+                        },function(){
+                            bsValidate();
+                        });
+            
+                    }
+            function submitData(valData){
+            $.ajax({   
+                url: "/Employee/AddEmployee",   
+                type: "POST",   
+                dataType: 'json',   
+                enctype: 'multipart/form-data',
+                            processData: false,
+                            contentType: 'application/x-www-form-urlencoded',
+                            cache: false, 
+                data: valData,
+                success: function (response) {
+                                              console.log(response);
+                                              if (response.status == "success") {
+                                                  swal({
+                                                          title: "Done",
+                                                          text: response.message,
+                                                          type: "success",
+                                                          confirmButtonClass: "btn-primary",
+                                                          confirmButtonText: "Okay",
+                                                          closeOnConfirm: true
+                                                      },
+                                                      function () {
+                                                          $(".confirm").attr('disabled', 'disabled');
+                                                          window.location.href = "/Employee/Add";
+                                                      });
+                              
+                                              } else {
+                                                  swal("System Error!", response.message, "error");
+                                              }
+                                          },
+                error: function (jqXHR, exception) {
+                    getErrorMessage(jqXHR, exception);
+                },  
+            });   
+            }
+        });   
+    });
+  function getErrorMessage(jqXHR, exception) {
+             var msg = '';
+             if (jqXHR.status === 0) {
+                 msg = 'Not connect.\n Verify Network.';
+             } else if (jqXHR.status == 404) {
+                 msg = 'Requested page not found. [404]';
+             } else if (jqXHR.status == 500) {
+                 msg = 'Internal Server Error [500].';
+             } else if (exception === 'parsererror') {
+                 msg = 'Requested JSON parse failed.';
+             } else if (exception === 'timeout') {
+                 msg = 'Time out error.';
+             } else if (exception === 'abort') {
+                 msg = 'Ajax request aborted.';
+             } else {
+                 msg = 'Uncaught Error.\n' + jqXHR.responseText;
+             }
+             swal("Error", msg, "error");
+         }
+</script>

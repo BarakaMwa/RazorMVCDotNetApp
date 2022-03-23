@@ -41,5 +41,19 @@ namespace RazorMVCDotNetApp.Dao.Department
         {
             return con.Department.Where(d => d.Id == id).ToList();
         }
+
+        public DepartmentModel Update(DepartmentModel department)
+        {
+            con.Department.Update(department);
+            con.SaveChanges();
+            return department;
+        }
+
+        public DepartmentModel Delete(DepartmentModel department)
+        {
+            con.Department.Remove(department);
+            con.SaveChanges();
+            return department;
+        }
     }
 }

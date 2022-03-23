@@ -8,5 +8,6 @@ namespace RazorMVCDotNetApp.Models
     {
         [Key] [Column("ID")] public int Id {get; set;}
         [Column("NAME")] public string Name {get; set;}
+        
     }
 }

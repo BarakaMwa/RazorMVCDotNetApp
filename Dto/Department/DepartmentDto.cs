@@ -7,7 +7,10 @@ namespace RazorMVCDotNetApp.Dto.Department
         public int Id { get; set; }
 
         [Required(ErrorMessage = "{0} is required")]
-        [StringLength(15)]
+        [StringLength(50)]
         public string Name { get; set; }
+
+        public string? IdEncryption  { get; set; }
+        
     }
 }

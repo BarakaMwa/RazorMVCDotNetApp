@@ -39,7 +39,24 @@ namespace RazorMVCDotNetApp.Services.Department
 
         public DepartmentModel EditDepartment(DepartmentDto departmentDto)
         {
-            throw new NotImplementedException();
+            var department = new DepartmentModel();
+            var departments = new List<DepartmentModel>();
+            try
+            {
+                departments = GetDepartment(departmentDto.IdEncryption);
+                departments[0].Name = departmentDto.Name;
+                departmentDao = new DepartmentDao();
+                department = departmentDao.Update(departments[0]);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Cannot Get Department for editing");
+                Console.WriteLine("Error");
+                Console.WriteLine(ex);
+                departments.Clear();
+            }
+
+            return department;
         }
 
         // public List<DepartmentModel> GetDepartments(SearchDto searchDto)
@@ -95,7 +112,6 @@ namespace RazorMVCDotNetApp.Services.Department
             cryptoEngine = new CryptoEngine();
             try
             {
-                
                 id = cryptoEngine.Decrypt(id, "qwer-3qa8-asdf21");
                 int idInt = Convert.ToInt32(id);
                 departmentDao = new DepartmentDao();
@@ -108,6 +124,28 @@ namespace RazorMVCDotNetApp.Services.Department
                 Console.WriteLine(ex);
             }
 
+            return department;
+        }
+
+        public DepartmentModel DeleteDepartment(string id)
+        {
+            var department = new DepartmentModel();
+            var departments = new List<DepartmentModel>();
+
+            try
+            {
+                departments = GetDepartment(id);
+                departmentDao = new DepartmentDao();
+                department = departmentDao.Delete(departments[0]);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Cannot Get Department for deleting");
+                Console.WriteLine("Error");
+                Console.WriteLine(ex);
+                departments.Clear();
+            }
+            
             return department;
         }
     }
