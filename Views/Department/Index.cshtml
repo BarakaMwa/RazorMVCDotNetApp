@@ -59,7 +59,8 @@ $(document).ready(function() {
     
                 var data = departmentsTable.row($(this).parents('tr')).data();
     
-                var url = '/Department/Delete/'+data['id'];                
+                var url = '/Department/Delete/'+ replaceSlashes(data['id']);
+                // var url = '/Department/Delete/'+data['id'];                
                 
                 var contentType = "application/x-www-form-urlencoded"
                 
@@ -89,7 +90,8 @@ $(document).ready(function() {
             $departmentsTable.on('click', '.btn-edit', function () {
                 var data = departmentsTable.row($(this).parents('tr')).data();
     
-                window.location.href = '/Department/Edit/' + data['id'];
+                 window.location.href = '/Department/Edit/' + replaceSlashes(data['id']);
+                // window.location.href = '/Department/Edit/' + data['id'];
     
             });
     
@@ -161,5 +163,14 @@ $(document).ready(function() {
                         }
                         swal("Error", msg, "error");
                     }
+                    
+                    function replaceSlashes(input){
+                                    
+                                    var output = input.replace("/", "QwErTy");
+                                    output = output.replace("\\", "qWeRtY");
+                                    
+                                    return output;
+                                }
+                    
 } );
 </script>

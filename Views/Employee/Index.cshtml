@@ -65,8 +65,8 @@ $(document).ready(function() {
     
                 var data = employeesTable.row($(this).parents('tr')).data();
     
-                // var url = '/Employee/Delete/'+ replaceSlashes(data['id']);
-                var url = '/Employee/Delete/'+ data['id'];
+                var url = '/Employee/Delete/'+ replaceSlashes(data['id']);
+                // var url = '/Employee/Delete/'+ data['id'];
                 
                 var type = 'get';                
                 
@@ -93,8 +93,8 @@ $(document).ready(function() {
             $employeesTable.on('click', '.btn-edit', function () {
                 var data = employeesTable.row($(this).parents('tr')).data();
     
-                // window.location.href = '/Employee/Edit/' + replaceSlashes(data['id']);
-                window.location.href = '/Employee/Edit/' + data['id'];
+                window.location.href = '/Employee/Edit/' + replaceSlashes(data['id']);
+                // window.location.href = '/Employee/Edit/' + data['id'];
     
             });
     

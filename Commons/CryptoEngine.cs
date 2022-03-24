@@ -9,7 +9,6 @@ namespace RazorMVCDotNetApp.Commons
         public string Encrypt(string input, string key)  
         {  
             byte[] inputArray = UTF8Encoding.UTF8.GetBytes(input);  
-            TripleDESCryptoServiceProvider tripleDES = new TripleDESCryptoServiceProvider();  
             tripleDES.Key = UTF8Encoding.UTF8.GetBytes(key);  
             tripleDES.Mode = CipherMode.ECB;  
             tripleDES.Padding = PaddingMode.PKCS7;  
@@ -22,6 +21,7 @@ namespace RazorMVCDotNetApp.Commons
         {  
             byte[] inputArray = Convert.FromBase64String(input);  
             TripleDESCryptoServiceProvider tripleDES = new TripleDESCryptoServiceProvider();  
+            var tripleDES = new TripleDESCryptoServiceProvider();  
             tripleDES.Key = UTF8Encoding.UTF8.GetBytes(key);  
             tripleDES.Mode = CipherMode.ECB;  
             tripleDES.Padding = PaddingMode.PKCS7;  
@@ -29,6 +29,13 @@ namespace RazorMVCDotNetApp.Commons
             byte[] resultArray = cTransform.TransformFinalBlock(inputArray, 0, inputArray.Length);  
             tripleDES.Clear();   
             return UTF8Encoding.UTF8.GetString(resultArray);  
-        }  
+        } 
+        
+        public string AddSlashes(string id)
+        {
+            id = id.Replace("qWeRtY", "\\");
+            id = id.Replace("QwErTy", "/");
+            return id;
+        }
     }  
 }

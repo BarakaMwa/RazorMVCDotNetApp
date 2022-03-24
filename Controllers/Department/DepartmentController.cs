@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using RazorMVCDotNetApp.Commons;
 using RazorMVCDotNetApp.Dao.Department;
 using RazorMVCDotNetApp.Dto;
 using RazorMVCDotNetApp.Dto.Department;
@@ -15,6 +16,7 @@ namespace RazorMVCDotNetApp.Controllers.Department
     {
         private IDepartmentService iDepartmentService;
         private readonly DepartmentDao departmentDao;
+        private CryptoEngine cryptoEngine;
         private DepartmentDto departmentDto;
         private readonly ILogger<HomeController> _logger;
 
@@ -34,6 +36,9 @@ namespace RazorMVCDotNetApp.Controllers.Department
 
         public IActionResult Edit(string id)
         {
+            cryptoEngine = new CryptoEngine();
+            id = cryptoEngine.AddSlashes(id);
+
             iDepartmentService = new AddDepartmentService();
             departmentDto = new DepartmentDto();
             List<DepartmentModel> departments = iDepartmentService.GetDepartment(id);
@@ -87,6 +92,9 @@ namespace RazorMVCDotNetApp.Controllers.Department
         [HttpPost]
         public IActionResult EditDepartment(DepartmentDto departmentDto)
         {
+            cryptoEngine = new CryptoEngine();
+            departmentDto.IdEncryption = cryptoEngine.AddSlashes(departmentDto.IdEncryption);
+            
             var response = new Dictionary<string, object>();
             //Editing IService Function Called here
             //Check if the model is valid and proceed with saving the data
@@ -127,6 +135,9 @@ namespace RazorMVCDotNetApp.Controllers.Department
         // [HttpPost]
         public IActionResult Delete(string id)
         {
+            cryptoEngine = new CryptoEngine();
+            id = cryptoEngine.AddSlashes(id);
+            
             var response = new Dictionary<string, object>();
             //Editing IService Function Called here
             //Check if the model is valid and proceed with saving the data

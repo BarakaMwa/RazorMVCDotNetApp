@@ -42,6 +42,8 @@ namespace RazorMVCDotNetApp.Controllers.Employee
         
         public IActionResult Edit(string id)
         {
+            cryptoEngine = new CryptoEngine();
+            id = cryptoEngine.AddSlashes(id);
             //Populate ViewBag with Departments Data
             var departments = new List<DepartmentModel>();
             var departmentDtos = new List<DepartmentDto>();
@@ -106,6 +108,9 @@ namespace RazorMVCDotNetApp.Controllers.Employee
         [HttpPost]
         public IActionResult EditEmployee(EmployeeDto employeeDto)
         {
+            cryptoEngine = new CryptoEngine();
+            employeeDto.IdEncryption = cryptoEngine.AddSlashes(employeeDto.IdEncryption);
+            employeeDto.DeptIdEncryption = cryptoEngine.AddSlashes(employeeDto.DeptIdEncryption);
             //Declare the response object
             var response = new Dictionary<string, object>();
             //Check if the model is valid and proceed with saving the data
@@ -180,6 +185,9 @@ namespace RazorMVCDotNetApp.Controllers.Employee
 
         public IActionResult Delete(string id)
         {
+            cryptoEngine = new CryptoEngine();
+            id = cryptoEngine.AddSlashes(id);
+            
             var response = new Dictionary<string, object>();
             //Editing IService Function Called here
             //Check if the model is valid and proceed with saving the data
