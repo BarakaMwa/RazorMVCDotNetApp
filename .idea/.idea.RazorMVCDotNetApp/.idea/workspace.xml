@@ -6,15 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/dataSources/f14be562-a2dd-4df4-8c4f-b860ad4d46ff.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/dataSources/f14be562-a2dd-4df4-8c4f-b860ad4d46ff.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Commons/CryptoEngine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Commons/CryptoEngine.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Department/DepartmentController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Department/DepartmentController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Department/AddDepartmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Department/AddDepartmentService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Employee/AddEmployeeService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Department/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Employee/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Index.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +108,8 @@
       <workItem from="1647898901438" duration="63931000" />
       <workItem from="1648073049286" duration="537000" />
       <workItem from="1648105635152" duration="2269000" />
-      <workItem from="1648109010415" duration="2849000" />
+      <workItem from="1648109010415" duration="3565000" />
+      <workItem from="1648193213103" duration="2492000" />
     </task>
     <task id="LOCAL-00001" summary="Razor Init">
       <created>1647553821256</created>
