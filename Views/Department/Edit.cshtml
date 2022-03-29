@@ -3,6 +3,7 @@
 @{
     ViewData["Title"] = "Edit Department";
     var department = (DepartmentDto) ViewData["Department"];
+    var employees = (List<EmployeeModel>) ViewData["Employees"];
 }
 <div class="row">
     <div class="col-12 col-lg-9">
@@ -15,27 +16,41 @@
         <a class="btn-info btn-sm btn ml-3" asp-action="Add" asp-controller="Department">Add Departments</a>
     </div>
 </div>
-<form asp-controller="Department" asp-action="EditDepartment" class="m-2 row g-3 needs-validation" id="editDepartmentForm" novalidate method="post">
-    <div class="col-md-4">
-        <label for="Name" class="form-label">Department Name</label>
-        <input type="text" asp-for="Name" class="form-control" id="Name" value="@department.Name" required>
-        <span asp-validation-for="Name" class="text-danger"></span>
-        <div class="valid-feedback">
-            Looks good!
-        </div>
-        <div class="invalid-feedback">
-            Not Valid
-        </div>
+<div class="row">
+    <div class="col-lg-4 col-md-4">
+        <form asp-controller="Department" asp-action="EditDepartment" class="m-2 row g-3 needs-validation" id="editDepartmentForm" novalidate method="post">
+            <div class="col-12">
+                <label for="Name" class="form-label">Department Name</label>
+                <input type="text" asp-for="Name" class="form-control" id="Name" value="@department.Name" required>
+                <span asp-validation-for="Name" class="text-danger"></span>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Not Valid
+                </div>
+            </div>
+        
+            <div class="col-12 hidden" hidden>
+                <input type="text" asp-for="IdEncryption" class="form-control hidden" hidden id="Id" value="@department.IdEncryption" required>
+            </div>
+        
+            <div class="col-12">
+                <input type="submit" id="btnSubmit" class="btn btn-success" value="Submit"/>
+            </div>
+        </form>
     </div>
+    <div class="col-lg-6 col-md-6">
+        <label>List Of Employees In @department.Name</label>
+        <ul class="list-group m-2 ">
+            @foreach (var item in employees)
+            {
+                <li class="list-group-item">@item.FirstName @item.LastName</li>
+            }
+        </ul>
+    </div>
+</div>
 
-    <div class="col-md-4 hidden" hidden>
-        <input type="text" asp-for="IdEncryption" class="form-control hidden" hidden id="Id" value="@department.IdEncryption" required>
-    </div>
-
-    <div class="col-12">
-        <input type="submit" id="btnSubmit" class="btn btn-success" value="Submit"/>
-    </div>
-</form>
 
 <script>
 (function () {
@@ -140,7 +155,7 @@ function bsValidate(){
                                                       },
                                                       function () {
                                                           $(".confirm").attr('disabled', 'disabled');
-                                                          window.location.href = "/Department/Edit/@department.IdEncryption";
+                                                          window.location.href = "/Department/";
                                                       });
                               
                                               } else {

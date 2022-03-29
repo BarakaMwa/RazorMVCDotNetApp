@@ -30,6 +30,7 @@ namespace RazorMVCDotNetApp.Employee.Services
                 employee.DepartmentId = employeeDto.DepartmentId;
                 employee.FirstName = employeeDto.FirstName;
                 employee.LastName = employeeDto.LastName;
+                employee.Gender = employeeDto.Gender;
 
                 employeeDao = new EmployeeDao();
                 return employeeDao.Save(employee);
@@ -52,6 +53,8 @@ namespace RazorMVCDotNetApp.Employee.Services
                 //Assign values to Employee oBject
                 employees[0].FirstName = employeeDto.FirstName;
                 employees[0].LastName = employeeDto.LastName;
+                employees[0].Gender = employeeDto.Gender;
+                
                 var decrypt = cryptoEngine.Decrypt(employeeDto.DeptIdEncryption, "qwer-3qa8-asdf21");
                 var idInt = Convert.ToInt32(decrypt);
                 employees[0].DepartmentId = idInt;
@@ -94,9 +97,18 @@ namespace RazorMVCDotNetApp.Employee.Services
 
         public List<EmployeeModel> FindAll()
         {
+            var employees = new List<EmployeeModel>();
             employeeDao = new EmployeeDao();
-            var employees = employeeDao.FindAll();
-
+            try
+            {
+                employees = employeeDao.FindAll();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to get Employee");
+                Console.WriteLine("Error");
+                Console.WriteLine(ex);
+            }
             return employees;
         }
 
@@ -121,6 +133,7 @@ namespace RazorMVCDotNetApp.Employee.Services
                     string idStr = cryptoEngine.Encrypt(item.Id.ToString(), "qwer-3qa8-asdf21");
                     empItem.Add("firstName", item.FirstName);
                     empItem.Add("lastName", item.LastName);
+                    empItem.Add("gender", item.Gender);
                     empItem.Add("id", idStr);
                     //getting the Department Name
                     string deptIdStr = cryptoEngine.Encrypt(item.DepartmentId.ToString(), "qwer-3qa8-asdf21");
@@ -163,7 +176,22 @@ namespace RazorMVCDotNetApp.Employee.Services
 
             return employee;
         }
-        
-        
+
+        public List<EmployeeModel> GetEmployeeByDeptId(DepartmentModel department)
+        {
+            var employees = new List<EmployeeModel>();
+            employeeDao = new EmployeeDao();
+            try
+            {
+                employees = employeeDao.GetEmployeeByDeptId(department);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Failed to get Employee");
+                Console.WriteLine("Error");
+                Console.WriteLine(ex);
+            }
+            return employees;
+        }
     }
 }

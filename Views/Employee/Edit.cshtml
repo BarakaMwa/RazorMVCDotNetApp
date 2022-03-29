@@ -3,8 +3,9 @@
 @model RazorMVCDotNetApp.Dto.Employee.EmployeeDto;
 @{
     ViewData["Title"] = "Edit Department";
-    var employee = (EmployeeDto) ViewData["Employee"];
-    var departments = (List<DepartmentDto>) ViewData["Departments"];
+    var employee = (EmployeeDto) ViewData["Employee"]!;
+    var departments = (List<DepartmentDto>) ViewData["Departments"]!;
+    var genders = new[] {"Male", "Female"};
 }
 <div class="row">
     <div class="col-12 col-lg-9">
@@ -59,6 +60,31 @@
                 else
                 {
                     <option value="@item.IdEncryption">@item.Name</option>
+                }
+            }
+        </select>
+        <span asp-validation-for="DepartmentId" class="text-danger"></span>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Not Valid
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <label for="Gender" class="form-label">Select Gender</label>
+        <select asp-for="Gender" class="form-control" id="Gender" required>
+            <option value=null >Select Gender</option>
+            @foreach (var item in genders)
+            {
+                if (item == employee.Gender)
+                {
+                    <option value="@item" selected>@item</option>
+                }
+                else
+                {
+                    <option value="@item"> @item</option>
                 }
             }
         </select>
@@ -178,7 +204,7 @@ function bsValidate(){
                                                       },
                                                       function () {
                                                           $(".confirm").attr('disabled', 'disabled');
-                                                          window.location.href = "/Employee";
+                                                          window.location.href = "/Employee/";
                                                       });
                               
                                               } else {

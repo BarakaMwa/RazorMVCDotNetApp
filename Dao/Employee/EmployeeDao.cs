@@ -52,6 +52,10 @@ namespace RazorMVCDotNetApp.Dao.Employee
             con.SaveChanges();
             return employee;
         }
+        public List<EmployeeModel> GetEmployeeByDeptId(DepartmentModel department)
+        {
+            return con.Employee.Where(d => d.DepartmentId == department.Id).ToList();
+        }
         
     }
 }

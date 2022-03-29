@@ -13,5 +13,7 @@ namespace RazorMVCDotNetApp.Models
         [Column("LAST_NAME")] public string LastName { get; set; }
         
         [Column("DEPARTMENT_ID")] public int DepartmentId { get; set; }
+        
+        [Column("GENDER")] public string Gender { get; set; }
     }
 }

@@ -18,6 +18,7 @@
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Gender Name</th>
             <th>Department Name</th>
             <th>Actions</th>
         </tr>
@@ -26,6 +27,7 @@
         <tr>
             <th>First Name</th>
             <th>Last Name</th>
+            <th>Gender Name</th>
             <th>Department Name</th>
             <th>Actions</th>
         </tr>
@@ -47,11 +49,12 @@ $(document).ready(function() {
                         // { "data": "avatar" },
                         {"data": "firstName"},
                         {"data": "lastName"},
+                        {"data": "gender"},
                         {"data": "departmentName"},
                         // {"data": "id"},
                     ],
                     "columnDefs": [{
-                                      "targets": 3,
+                                      "targets": 4,
                                       "data": null,
                                       "defaultContent": ""
                                           + "<div class='badge rounded-pill bg-primary m-1 btn-edit p-2' title='Edit' role='button'>Edit</div>"
@@ -168,11 +171,11 @@ $(document).ready(function() {
                     }
                     
             function replaceSlashes(input){
-                
-                var output = input.replace("/", "QwErTy");
-                output = output.replace("\\", "qWeRtY");
-                
-                return output;
-            }
+                                 
+                                 var output = input.replace(/\//g, "QwErTy");
+                                 output = output.replace(/\\/g, "qWeRtY");
+                                 
+                                return output;
+                                 }
 } );
 </script>

@@ -23,5 +23,9 @@ namespace RazorMVCDotNetApp.Dto.Employee
         public string? DepartmentName{set; get;}
         
         public string? IdEncryption { get; set; }
+        
+        [Required(ErrorMessage = "{0} is Required")]
+        [StringLength(8)]
+        public string Gender { get; set; }
     }
 }

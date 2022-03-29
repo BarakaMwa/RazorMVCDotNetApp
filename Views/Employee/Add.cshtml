@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Add Employee";
     var departments = (List<DepartmentModel>) ViewData["Departments"];
+    var genders = new[] {"Male", "Female"};
 }
 <div class="row">
     <div class="col-12 col-lg-9">
@@ -55,6 +56,27 @@
             Not Valid
         </div>
     </div>
+
+<div class="col-md-4">
+        <label for="Gender" class="form-label">Select Gender</label>
+        <select asp-for="Gender" class="form-control" id="Gender" required>
+            <option>Select Gender</option>
+                @foreach (var item in genders)
+                            {
+                   
+                                    <option value="@item" >@item</option>
+                                
+                            }
+        </select>
+        <span asp-validation-for="DepartmentId" class="text-danger"></span>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+        <div class="invalid-feedback">
+            Not Valid
+        </div>
+    </div>
+
     <div class="col-12">
         <input type="submit" id="btnSubmit" class="btn btn-primary" value="Save"/>
     </div>

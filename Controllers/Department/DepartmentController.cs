@@ -6,7 +6,9 @@ using RazorMVCDotNetApp.Commons;
 using RazorMVCDotNetApp.Dao.Department;
 using RazorMVCDotNetApp.Dto;
 using RazorMVCDotNetApp.Dto.Department;
+using RazorMVCDotNetApp.Employee.Services;
 using RazorMVCDotNetApp.Interfaces.Department;
+using RazorMVCDotNetApp.Interfaces.Employee;
 using RazorMVCDotNetApp.Models;
 using RazorMVCDotNetApp.Services.Department;
 
@@ -15,6 +17,7 @@ namespace RazorMVCDotNetApp.Controllers.Department
     public class DepartmentController : Controller
     {
         private IDepartmentService iDepartmentService;
+        private IEmployeeService iEmployeeService;
         private readonly DepartmentDao departmentDao;
         private CryptoEngine cryptoEngine;
         private DepartmentDto departmentDto;
@@ -45,6 +48,11 @@ namespace RazorMVCDotNetApp.Controllers.Department
             departmentDto.Name = departments[0].Name;
             departmentDto.IdEncryption = id;
             ViewData["Department"] = departmentDto;
+
+
+            iEmployeeService = new AddEmployeeService();
+            List<EmployeeModel> employees = iEmployeeService.GetEmployeeByDeptId(departments[0]);
+            ViewData["Employees"] = employees;
             return View(new DepartmentDto());
         }
 

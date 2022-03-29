@@ -19,6 +19,8 @@ namespace RazorMVCDotNetApp.Interfaces.Employee
         List<Object> GetEmployees(SearchDto searchDto);
         
         EmployeeModel DeleteEmployee(string id);
-        
+
+        List<EmployeeModel> GetEmployeeByDeptId(DepartmentModel department);
+
     }
 }

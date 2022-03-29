@@ -5228,16 +5228,22 @@ Name</ColNames>
       <Position>4</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="1174" parent="374" name="DEPARTMENT_ID">
+    <column id="1174" parent="374" name="GENDER">
+      <Position>5</Position>
+      <DataType>varchar(8)|0s</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Male&apos;</DefaultExpression>
+    </column>
+    <index id="1175" parent="374" name="DEPARTMENT_ID">
       <ColNames>DEPARTMENT_ID</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="1175" parent="374" name="PRIMARY">
+    <key id="1176" parent="374" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="1176" parent="374" name="employee_ibfk_1">
+    <foreign-key id="1177" parent="374" name="employee_ibfk_1">
       <ColNames>DEPARTMENT_ID</ColNames>
       <RefTableName>department</RefTableName>
       <RefColNames>ID</RefColNames>

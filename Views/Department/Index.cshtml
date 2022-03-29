@@ -164,13 +164,13 @@ $(document).ready(function() {
                         swal("Error", msg, "error");
                     }
                     
-                    function replaceSlashes(input){
-                                    
-                                    var output = input.replace("/", "QwErTy");
-                                    output = output.replace("\\", "qWeRtY");
-                                    
-                                    return output;
-                                }
+                     function replaceSlashes(input){
+                     
+                     var output = input.replace(/\//g, "QwErTy");
+                     output = output.replace(/\\/g, "qWeRtY");
+                     
+                    return output;
+                     }
                     
 } );
 </script>
