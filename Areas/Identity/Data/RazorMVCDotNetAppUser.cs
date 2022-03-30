@@ -11,8 +11,11 @@ namespace RazorMVCDotNetApp.Areas.Identity.Data
     public class RazorMVCDotNetAppUser : IdentityUser
     {
         private string FirstName { set; get; }
+        
         private string LastName { set; get; }
+        
         private string Gender { set; get; }
+        
     }  
 }
 

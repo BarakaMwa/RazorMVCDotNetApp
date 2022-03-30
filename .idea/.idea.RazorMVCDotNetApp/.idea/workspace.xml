@@ -6,90 +6,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Data/RazorMVCDotNetAppContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Data/RazorMVCDotNetAppUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/AccessDenied.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/AccessDenied.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ConfirmEmail.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ConfirmEmail.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ConfirmEmailChange.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ExternalLogin.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ExternalLogin.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ForgotPassword.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ForgotPassword.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ForgotPasswordConfirmation.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Lockout.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Lockout.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Login.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Login.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/LoginWith2fa.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/LoginWith2fa.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/LoginWithRecoveryCode.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Logout.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Logout.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/ChangePassword.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/DeletePersonalData.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/Disable2fa.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/DownloadPersonalData.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/Email.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/Email.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/EnableAuthenticator.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/ExternalLogins.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/GenerateRecoveryCodes.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/Index.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/Index.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/ManageNavPages.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/PersonalData.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/ResetAuthenticator.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/SetPassword.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/ShowRecoveryCodes.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/TwoFactorAuthentication.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/_Layout.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/_ManageNav.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/_StatusMessage.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Register.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Register.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ResendEmailConfirmation.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ResetPassword.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ResetPassword.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/_StatusMessage.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/_Layout.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/_ViewImports.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Areas/Identity/Pages/_ViewStart.cshtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ScaffoldingReadMe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Views/Shared/_LoginPartial.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Controllers/Employee/EmployeeController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RazorMVCDotNetApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RazorMVCDotNetApp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Department/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Department/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Edit.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Employee/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Employee/Index.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Shared/_Layout.cshtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Identity/Data/RazorMVCDotNetAppUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Identity/Data/RazorMVCDotNetAppUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Areas/Identity/Pages/Account/Manage/_Layout.cshtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,6 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -117,10 +41,12 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/954b64bc4e87439dbdccacd21a67d66216b578/157/SingleQueryingEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2a86cc865c7648b4a484ca6781ab76f4c1698/B0/ViewDataDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e72ed0bdb2b748a88c3be21df0678094a070/3/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/29/RazorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/2D/RazorPageOfT.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1051738089a4f1698e76ec4180c96c31e6790/79/d832d6b1/DbSet`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/mwangamb/RiderProjects/RazorMVCDotNetApp/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/mwangamb/RiderProjects/RazorMVCDotNetApp/Areas/Identity/Pages/Account/Manage/_Layout.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" root2="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/16e6dcaab0be4156ad31af88b1ed8700a20698/FB/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="26W7I9hHHlKnd8FEjHs9pfgqVIY" />
@@ -197,7 +123,7 @@
       <workItem from="1648193213103" duration="2492000" />
       <workItem from="1648458947945" duration="8522000" />
       <workItem from="1648540028581" duration="11669000" />
-      <workItem from="1648579411750" duration="10944000" />
+      <workItem from="1648579411750" duration="12428000" />
     </task>
     <task id="LOCAL-00001" summary="Razor Init">
       <created>1647553821256</created>
