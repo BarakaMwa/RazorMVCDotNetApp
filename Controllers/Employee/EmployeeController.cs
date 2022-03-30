@@ -167,6 +167,8 @@ namespace RazorMVCDotNetApp.Controllers.Employee
             employeeDto.FirstName = employees[0].FirstName;
             employeeDto.LastName = employees[0].LastName;
             employeeDto.DepartmentId = employees[0].DepartmentId;
+            employeeDto.Gender = employees[0].Gender;
+            
             var deptIdStr = cryptoEngine.Encrypt(employees[0].DepartmentId.ToString(), "qwer-3qa8-asdf21");
             employeeDto.DeptIdEncryption = deptIdStr;
         }

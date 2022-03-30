@@ -33,6 +33,8 @@ $(document).ready(function() {
     
     var departmentsTable = $('#departmentsTable').DataTable( {
         "processing": true,
+        "paging": true,
+        "ordering": true,
                     "serverSide": true,
                     "ajax": {
                         "url": "/Department/GetTopHundred",

@@ -2,9 +2,16 @@ using RazorMVCDotNetApp.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using RazorMVCDotNetApp.Areas.Identity.Data;
 
 var builder = WebApplication.CreateBuilder(args);
-
+var connectionString = builder.Configuration.GetConnectionString("RazorMVCDotNetAppContextConnection");builder.Services.AddDbContext<RazorMVCDotNetAppContext>(options =>
+    options.UseMySQL(connectionString));
+builder.Services.AddDefaultIdentity<RazorMVCDotNetAppUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddEntityFrameworkStores<RazorMVCDotNetAppContext>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -31,7 +38,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();

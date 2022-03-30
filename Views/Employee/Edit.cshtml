@@ -75,16 +75,16 @@
     <div class="col-md-4">
         <label for="Gender" class="form-label">Select Gender</label>
         <select asp-for="Gender" class="form-control" id="Gender" required>
-            <option value=null >Select Gender</option>
+            <option disabled >Select Gender</option>
             @foreach (var item in genders)
             {
                 if (item == employee.Gender)
                 {
-                    <option value="@item" selected>@item</option>
+                    <option value="@item" selected >@item</option>
                 }
                 else
                 {
-                    <option value="@item"> @item</option>
+                    <option value="@item" >@item</option>
                 }
             }
         </select>

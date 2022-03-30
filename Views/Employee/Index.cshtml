@@ -39,6 +39,8 @@ $(document).ready(function() {
          
     var employeesTable = $('#employeesTable').DataTable( {
         "processing": true,
+        "paging": true,
+        "ordering": true,
                     "serverSide": true,
                     "ajax": {
                         "url": "/Employee/GetTopHundred",
