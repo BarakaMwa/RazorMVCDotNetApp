@@ -39,6 +39,7 @@ namespace RazorMVCDotNetApp.Employee.Services
             {
                 Console.WriteLine("Cannot Add Employee");
                 Console.WriteLine(ex);
+                employee = null;
                 return employee;
             }
         }
