@@ -8,8 +8,10 @@ using RazorMVCDotNetApp.Dto;
 using RazorMVCDotNetApp.Dto.Department;
 using RazorMVCDotNetApp.Dto.Employee;
 using RazorMVCDotNetApp.Employee.Services;
+using RazorMVCDotNetApp.Interfaces.Department;
 using RazorMVCDotNetApp.Interfaces.Employee;
 using RazorMVCDotNetApp.Models;
+using RazorMVCDotNetApp.Services.Department;
 
 namespace RazorMVCDotNetApp.Controllers.Employee
 {
@@ -17,6 +19,7 @@ namespace RazorMVCDotNetApp.Controllers.Employee
     {
         private readonly ILogger<HomeController> _logger;
         private IEmployeeService iEmployeeService;
+        private IDepartmentService iDepartmentService;
         private DepartmentDao departmentDao;
         private EmployeeDto employeeDto;
         private CryptoEngine cryptoEngine;
@@ -33,8 +36,8 @@ namespace RazorMVCDotNetApp.Controllers.Employee
         public IActionResult Add()
         {
             //Populate ViewBag with Departments Data
-            departmentDao = new DepartmentDao();
-            ViewData["Departments"] = departmentDao.FindAll();
+            iDepartmentService = new AddDepartmentService();
+            ViewData["Departments"] = iDepartmentService.FindAll();
 
             //Pass the EmployeeDto to the View
             return View(new EmployeeDto());

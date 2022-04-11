@@ -73,7 +73,6 @@ namespace RazorMVCDotNetApp.Services.Department
                     departments = departmentDao.FindTopHundred();
                 }
 
-                int x = 0;
                 foreach (var item in departments)
                 {
                     var deptItem = new Dictionary<string, string>();
@@ -83,7 +82,6 @@ namespace RazorMVCDotNetApp.Services.Department
                     deptItem.Add("id", idString);
 
                     departmentList.Add(deptItem);
-                    x++;
                 }
             }
             catch (Exception ex)
@@ -91,7 +89,7 @@ namespace RazorMVCDotNetApp.Services.Department
                 Console.WriteLine("Error Occured!! ");
                 Console.WriteLine("Error Details : ");
                 Console.WriteLine(ex);
-                departmentList.Clear();
+                departmentList = null;
             }
 
             return departmentList;
