@@ -6,14 +6,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Apis/ApiController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apis/ApiDao.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apis/ApiDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apis/ApiIService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Apis/ApiService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/select/select2.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wwwroot/select/select2.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,6 +129,7 @@
       <workItem from="1649659272733" duration="9637000" />
       <workItem from="1649749143300" duration="5345000" />
       <workItem from="1650036678134" duration="1804000" />
+      <workItem from="1655300561970" duration="722000" />
     </task>
     <task id="LOCAL-00001" summary="Razor Init">
       <created>1647553821256</created>
