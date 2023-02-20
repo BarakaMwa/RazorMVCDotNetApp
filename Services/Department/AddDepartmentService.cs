@@ -16,6 +16,8 @@ namespace RazorMVCDotNetApp.Services.Department
 
         public AddDepartmentService()
         {
+            departmentDao = new DepartmentDao();
+            cryptoEngine = new CryptoEngine();
         }
 
         public DepartmentModel AddDepartment(DepartmentDto departmentDto)

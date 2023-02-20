@@ -4,9 +4,15 @@
     <projectFile profileName="RazorMVCDotNetApp">RazorMVCDotNetApp.csproj</projectFile>
     <projectFile profileName="IIS Express">RazorMVCDotNetApp.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1e6621a1-d13e-483a-9bb3-09e974cf411c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/global.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RazorMVCDotNetApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dao/Department/DepartmentDao.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dao/Department/DepartmentDao.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Services/Department/AddDepartmentService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Services/Department/AddDepartmentService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +43,14 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/954b64bc4e87439dbdccacd21a67d66216b578/157/SingleQueryingEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2a86cc865c7648b4a484ca6781ab76f4c1698/B0/ViewDataDictionary.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e72ed0bdb2b748a88c3be21df0678094a070/3/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/29/RazorPage.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/2D/RazorPageOfT.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/c7e8a992f5b0456ea6e9745bfd0611323ac80/29/RazorPage.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/e72ed0bdb2b748a88c3be21df0678094a070/3/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f1051738089a4f1698e76ec4180c96c31e6790/79/d832d6b1/DbSet`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/954b64bc4e87439dbdccacd21a67d66216b578/157/SingleQueryingEnumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/16e6dcaab0be4156ad31af88b1ed8700a20698/FB/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/2a86cc865c7648b4a484ca6781ab76f4c1698/B0/ViewDataDictionary.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/f1051738089a4f1698e76ec4180c96c31e6790/D4/EntityFrameworkServiceCollectionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="26W7I9hHHlKnd8FEjHs9pfgqVIY" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -64,6 +71,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -130,6 +141,11 @@
       <workItem from="1649749143300" duration="5345000" />
       <workItem from="1650036678134" duration="1804000" />
       <workItem from="1655300561970" duration="722000" />
+      <workItem from="1675074516854" duration="706000" />
+      <workItem from="1676014691499" duration="786000" />
+      <workItem from="1676617450947" duration="5229000" />
+      <workItem from="1676804965420" duration="2394000" />
+      <workItem from="1676899265554" duration="3930000" />
     </task>
     <task id="LOCAL-00001" summary="Razor Init">
       <created>1647553821256</created>
@@ -200,65 +216,65 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Department/AddDepartmentService.cs</url>
-          <line>22</line>
+          <line>24</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Department\AddDepartmentService.cs" initialLine="17" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="632" />
+              <option value="728" />
             </startOffsets>
             <endOffsets>
-              <option value="668" />
+              <option value="764" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Department/AddDepartmentService.cs</url>
-          <line>35</line>
+          <line>37</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Department\AddDepartmentService.cs" initialLine="29" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="1085" />
+              <option value="1181" />
             </startOffsets>
             <endOffsets>
-              <option value="1103" />
+              <option value="1199" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Department/AddDepartmentService.cs</url>
-          <line>29</line>
+          <line>31</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Department\AddDepartmentService.cs" initialLine="23" containingFunctionPresentation="method 'AddDepartment'">
             <startOffsets>
-              <option value="870" />
+              <option value="966" />
             </startOffsets>
             <endOffsets>
-              <option value="908" />
+              <option value="1004" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Dao/Department/DepartmentDao.cs</url>
-          <line>19</line>
+          <line>21</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Dao\Department\DepartmentDao.cs" initialLine="22" containingFunctionPresentation="method 'Save'">
             <startOffsets>
-              <option value="460" />
+              <option value="502" />
             </startOffsets>
             <endOffsets>
-              <option value="478" />
+              <option value="520" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Dao/Department/DepartmentDao.cs</url>
-          <line>16</line>
+          <line>18</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Dao\Department\DepartmentDao.cs" initialLine="19" containingFunctionPresentation="method 'Save'">
             <startOffsets>
-              <option value="384" />
+              <option value="426" />
             </startOffsets>
             <endOffsets>
-              <option value="415" />
+              <option value="457" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="6" />
@@ -317,52 +333,52 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Dao/Department/DepartmentDao.cs</url>
-          <line>29</line>
+          <line>31</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Dao\Department\DepartmentDao.cs" initialLine="31" containingFunctionPresentation="method 'FindContaining'">
             <startOffsets>
-              <option value="710" />
+              <option value="752" />
             </startOffsets>
             <endOffsets>
-              <option value="775" />
+              <option value="817" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="34" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Department/AddDepartmentService.cs</url>
-          <line>107</line>
+          <line>109</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Department\AddDepartmentService.cs" initialLine="93" containingFunctionPresentation="method 'GetDepartment'">
             <startOffsets>
-              <option value="3464" />
+              <option value="3560" />
             </startOffsets>
             <endOffsets>
-              <option value="3468" />
+              <option value="3564" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Services/Department/AddDepartmentService.cs</url>
-          <line>123</line>
+          <line>125</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Services\Department\AddDepartmentService.cs" initialLine="109" containingFunctionPresentation="method 'GetDepartment'">
             <startOffsets>
-              <option value="4070" />
+              <option value="4166" />
             </startOffsets>
             <endOffsets>
-              <option value="4071" />
+              <option value="4167" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="40" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Dao/Department/DepartmentDao.cs</url>
-          <line>39</line>
+          <line>41</line>
           <properties documentPath="C:\Users\mwangamb\RiderProjects\RazorMVCDotNetApp\Dao\Department\DepartmentDao.cs" initialLine="41" containingFunctionPresentation="method 'FindById'">
             <startOffsets>
-              <option value="1009" />
+              <option value="1051" />
             </startOffsets>
             <endOffsets>
-              <option value="1063" />
+              <option value="1105" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="41" />

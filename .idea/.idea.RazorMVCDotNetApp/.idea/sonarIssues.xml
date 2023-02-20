@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Immediate Window">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/DashBoard/Controllers/HomeController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/DashBoard/Views/Home/Index.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/DashBoard/Views/Shared/Layouts/_Layout.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/DashBoard/Views/Shared/_DashBoardLayout.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/DashBoard/Views/Shared/_Layout.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/DashBoard/Views/Shared/_Partial.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/DashBoard/Views/Shared/_SideMenu.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/DashBoard/Views/Shared/_SideMenuPartial.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Identity/Pages/Account/Login.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Identity/Pages/Account/Manage/_Layout.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Identity/Pages/_Layout.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Table/Controllers/HomeController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Table/Views/Home/Index.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Table/Views/Index.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Table/Views/Shared/Layouts/_Layout.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Table/Views/Shared/Layouts/_Layout.cshtml.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Table/Views/Shared/Menus/_DashBoardSideMene.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Table/Views/Shared/Menus/_MenuPartial.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Areas/Table/Views/Shared/_Layout.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Controllers/ActorController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Controllers/AddressController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Controllers/CatergoryController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Controllers/FilmController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Daos/ActorDao.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Data/ApplicationDbContext.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/ActorDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/AddressDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/CategoryDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/CityDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/CountryDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/CustomerDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/ErrorViewDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/FilmActorDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/FilmCategoryDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/FilmDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/FilmTextDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/InventoryDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/LanguageDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/PaymentDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/RatingDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/RatingModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/RentalDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/SpecialFeatureDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/SpecialFeaturesModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/StaffDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Dtos/StoreDto.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Interfaces/IActor.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Interfaces/IRating.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Interfaces/ISpecialFeature.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Interfaces/RatingModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Interfaces/SpecialFeaturesModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/AddressModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/CategoryModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/CityModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/CountryModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/ErrorViewModel.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/FilmActorModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/FilmCategoryModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/InventoryModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/RatingModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/SpecialFeaturesModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Models/StoreModal.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Program.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Services/ActorService.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Actor/Create.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Actor/Delete.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Actor/Details.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Actor/Edit.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Actor/Index.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Film/Create.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Home/Index.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Home/Privacy.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Shared/NavBarPartial.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Shared/_Layout.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Shared/_TopNavBar.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/Views/Shared/_TopNavBarPartial.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CSharpLab/wwwroot/custom.css">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../Program Files/Ampps/www/C#MvcAppDotNetLab/CreateDirectory/CreateDirectory/Program.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$APPLICATION_CONFIG_DIR$/consoles/db/dd03db58-0800-4af8-8b34-4451a95221d5/console.sql">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Dao/Department/DepartmentDao.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Data/DataBaseConnection.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Program.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Services/Department/AddDepartmentService.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../SakilaCrudWebAppWithLogin/Data/ApplicationDbContext.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../SakilaCrudWebAppWithLogin/Data/Migrations/00000000000000_CreateIdentitySchema.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../SakilaCrudWebAppWithLogin/Models/ErrorViewModel.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/zambia-qualifications-authority/MVC/Areas/Portal/Controllers/FinanceController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/zambia-qualifications-authority/MVC/Areas/Portal/Controllers/ReportsController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/zambia-qualifications-authority/MVC/Areas/Portal/Controllers/ValidationAndEvaluationController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/zambia-qualifications-authority/MVC/Controllers/FinanceController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/zambia-qualifications-authority/MVC/Controllers/RegistrationAndAccreditationOfNationalOccupationStandardController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/zambia-qualifications-authority/MVC/Controllers/VerificationAndEvaluationApplicationController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/zambia-qualifications-authority/ZQMIS.Domain/DatabaseWrapper.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/zambia-qualifications-authority/ZQMIS.Domain/Misc/AttachmentHelper.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/zambia-qualifications-authority/ZQMIS.Domain/Services/ValidationAndEvaluationService.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../snqcrs/snqcrs/Domain/Models/MerchantCode.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../snqcrs/snqcrs/Domain/Service/CipherService.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../snqcrs/snqcrs/Web/Models/MerchantQrCode.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../snqcrs/snqcrs/Web/Models/MerchantQrCodeViewModel.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../snqcrs/snqcrs/Web/Pages/QrCode/Index.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../snqcrs/snqcrs/Web/QrCodeGenerator/QrCodeController.cs">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../snqcrs/snqcrs/Web/Views/QrCode/Index.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../snqcrs/snqcrs/Web/Views/QrCode/MerchantCode.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../../../snqcrs/snqcrs/Web/Views/QrCode/MerchantQrCode.cshtml">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

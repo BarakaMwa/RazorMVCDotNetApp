@@ -7,10 +7,12 @@ namespace RazorMVCDotNetApp.Dao.Department
 {
     public class DepartmentDao
     {
-        
-        DbConnection con = new DbConnection();
+        private readonly DbConnection con;
 
-        public DepartmentDao(){ }
+        public DepartmentDao()
+        {
+            con = new DbConnection();
+        }
         
         public DepartmentModel Save(DepartmentModel department)
         {
